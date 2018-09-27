@@ -1,0 +1,35 @@
+// global variables
+$browser-context: 16;
+$time: .2s;
+
+// colors
+$highlight: rgba(0, 0, 0, 0);
+$purple-light: #967eff;
+$purple-dark: #483c7b;
+$gray-light: #b6b6b6;
+$gray-dark: #979797;
+$purple: #7361c1;
+$dark: #090909;
+$red: #ff5454;
+$white: #fff;
+$gray: #555;
+
+// background colors
+$modal: rgba(0, 0, 0, .75);
+$gradient: #161618;
+$clients: #f9f9fa;
+
+// media queries
+$phone: 768px;
+$tablet: 1024px;
+$laptop: 1200px;
+$desktop: 1440px;
+$biggest: 2560px;
+$container: 100%;
+
+// font
+$light: 'red ring light';
+$regular: 'red ring regular';
+$medium: 'red ring medium';
+$black: 'red ring black';
+$bold: 'red ring bold';

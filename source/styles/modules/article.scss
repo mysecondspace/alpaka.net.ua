@@ -1,0 +1,1874 @@
+.article {
+
+  // all blocks on the main page
+  &.main-page {
+    @include background(linear-gradient(top, $gradient, $gradient, $dark, $dark, $dark, $purple-dark));
+    padding-top: 8.5%;
+
+    @include media(phone) {
+      padding-top: 43.5%;
+    }
+
+    .h3 {
+      color: $gray-light;
+    }
+
+    // block with catalog
+    .article__catalog {
+      background-color: transparent;
+      padding: 10.5% 0 22.5%;
+      align-items: center;
+      display: flex;
+
+      @include media(phone) {
+        padding: 15.5% 0 57.5%;
+        display: grid;
+      }
+
+      > div {
+        width: 76%;
+        float: left;
+        display: flex;
+        align-items: center;
+
+        @include media(phone) {
+          margin-bottom: 18%;
+          display: grid;
+          width: auto;
+        }
+
+        &:last-of-type {
+          @include media(phone) {
+            margin-bottom: 0;
+          }
+        }
+
+        img {
+          float: left;
+          width: 42.4%;
+          height: 363px;
+          margin-right: 8%;
+          object-fit: cover;
+
+          @include media(phone) {
+            margin-right: 0;
+            height: 310px;
+            width: 100%;
+          }
+        }
+
+        > div {
+          float: left;
+          width: 49.6%;
+
+          @include media(phone) {
+            margin-top: 17%;
+            width: 100%;
+          }
+        }
+      }
+
+      .bodycopy {
+        margin-top: 4%;
+
+        @include media(phone) {
+          margin-top: 6%;
+        }
+      }
+
+      .arrow {
+        margin-top: 24.5%;
+
+        @include media(phone) {
+          margin-top: 18%;
+        }
+      }
+
+      &--list {
+        height: fit-content;
+        float: left;
+        width: 26%;
+
+        @include media(phone) {
+          background-color: transparent;
+          width: 100%;
+        }
+
+        li {
+          margin-bottom: 22px;
+          line-height: 20px;
+
+          @include media(phone) {
+            margin-top: 25.5px;
+            margin-bottom: 0;
+        }
+        }
+      }
+    }
+
+    // block with portfolio
+    .article__portfolio {
+      background-color: transparent;
+      padding-top: 2%;
+
+      .button {
+        align-items: center;
+        position: relative;
+        display: flex;
+        height: 91px;
+        float: right;
+        width: 24%;
+        z-index: 1;
+
+        @include media(phone) {
+          margin-top: 20px;
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      .arrow {
+        color: $white;
+        transform: translateX(calc(50% - 35px));
+
+        &::after {
+          background: url('/../images/arrow-third.svg');
+        }
+      }
+
+      .swiper-container .swiper-pagination {
+        display: none;
+      }
+
+      &--cellar {
+        width: 51.3%;
+        float: left;
+        margin: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+
+        a {
+          width: 39.4%;
+
+          &:first-of-type {
+            padding-right: 10.6%;
+          }
+
+          &:last-of-type {
+            padding-left: 10.6%;
+          }
+        }
+      }
+    }
+
+    // block with advantages
+    .article__advantages {
+      margin: 22.5% 0 30.5%;
+
+      @include media(phone) {
+        margin: 58.5% 0 55.5%;
+      }
+
+      .arrow {
+        margin-top: 21%;
+      }
+
+      &--icons {
+        margin-top: 10%;
+
+        + div {
+          margin: 8.5% 0 0 10%;
+
+          @include media(phone) {
+            margin-top: 6.5%;
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // block with swiper touch slider on the blog page
+    .article__blog {
+      padding: 6% 0 13%;
+
+      @include media(phone) {
+        padding: 6% 0 13%;
+      }
+    }
+  }
+
+  // added gradient background
+  &--gradient {
+    @include background(linear-gradient(top, $dark, $dark, $dark, $dark, $purple-dark));
+  }
+
+  // block with achievements
+  &__achievements {
+    display: flex;
+    margin-top: 5.5%;
+
+    @include media(phone) {
+      margin-top: 32%;
+      display: block;
+    }
+
+    > div {
+      border: 10px solid $purple;
+      margin-right: 3%;
+      padding: 20px;
+      height: 205px;
+      width: 22%;
+
+      @include media(phone) {
+        border: 8px solid $purple;
+        width: calc(100% - 56px);
+        margin-bottom: 7%;
+        padding: 8px 20px;
+        margin-right: 0;
+        height: 135px;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      span {
+        color: $purple;
+        font-size: em(60);
+
+        @include media(phone) {
+          font-size: em(45);
+        }
+      }
+
+      p {
+        line-height: 2;
+        color: $gray-dark;
+        margin-top: 48px;
+        font-size: em(15);
+        text-transform: uppercase;
+
+        @include media(phone) {
+          color: $gray-light;
+          line-height: 25px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  // block with advantages
+  &__advantages {
+    @include inline-block;
+    margin-top: 25.2%;
+
+    @include media(phone) {
+      margin-top: 58.2%;
+      display: grid;
+    }
+
+    .bodycopy {
+      margin-top: 8%;
+
+      @include media(phone) {
+        margin-top: 5%;
+      }
+    }
+
+    &--icons {
+      width: 50%;
+      float: left;
+      display: flex;
+      margin-top: 17%;
+
+      @include media(phone) {
+        margin-top: 8%;
+        display: block;
+        width: 100%;
+        zoom: .8;
+      }
+
+      > div {
+        &:first-of-type {
+          display: grid;
+          grid-row-gap: 45px;
+
+          @include media(phone) {
+            justify-content: space-between;
+            display: flex;
+          }
+        }
+
+        &:last-of-type {
+          margin-left: 21%;
+
+          @include media(phone) {
+            text-align: center;
+            margin-top: 13%;
+            margin-left: 0;
+            zoom: .8;
+          }
+        }
+      }
+
+      + div {
+        width: 37%;
+        float: left;
+        margin: 15.5% 0 0 10%;
+
+        @include media(phone) {
+          margin-top: 6.5%;
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // block with clients
+  &__clients {
+    margin-top: 15.5%;
+    position: relative;
+
+    @include media(phone) {
+      margin-top: 48.5%;
+    }
+
+    &--background {
+      width: 100%;
+      height: 100%;
+      background-color: $clients;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 8%;
+
+      @include media(phone) {
+        top: 4%;
+      }
+    }
+
+    &--brands {
+      display: flex;
+      margin-top: 14.5%;
+
+      @include media(phone) {
+        margin-top: 16.5%;
+        display: grid;
+      }
+
+      > div {
+        float: left;
+        width: 33.33%;
+        margin-left: 3%;
+
+        @include media(phone) {
+          margin-bottom: 22%;
+          margin-left: 0;
+          width: 100%;
+        }
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        p {
+          line-height: 2;
+          font-size: em(15);
+
+          @include media(phone) {
+            line-height: 26px;
+          }
+        }
+
+        a {
+          @include inline-block;
+          @include transition($time);
+          border-bottom: 2px solid;
+          letter-spacing: 2px;
+          padding-bottom: 1px;
+          font-size: em(14);
+          margin-top: 18%;
+          color: $purple;
+
+          @include media(phone) {
+            margin-top: 12%;
+          }
+
+          &:hover {
+            color: $purple-light;
+          }
+        }
+
+        div {
+          height: 135px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 12.5%;
+
+          @include media(phone) {
+            margin-bottom: -7.5%;
+          }
+
+          img {
+            zoom: .5;
+            margin: 0 auto;
+
+            @include media(phone) {
+              zoom: .3;
+            }
+          }
+        }
+      }
+    }
+
+    &--swiper {
+      overflow: hidden;
+      position: relative;
+      padding: 14% 8% 22.5%;
+
+      @include media(phone) {
+        padding: 28% 0 85%;
+      }
+
+      .swiper-container {
+        overflow: initial;
+        position: initial;
+
+        &::before,
+        &::after {
+          content: '';
+          background-color: $clients;
+          position: absolute;
+          height: 104px;
+          width: 95px;
+          top: initial;
+          z-index: 2;
+
+          @include media(phone) {
+            display: none;
+          }
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          margin-top: -104px;
+          right: 0;
+        }
+
+        .swiper-wrapper {
+          align-items: center;
+          display: flex;
+
+          .swiper-slide {
+            text-align: center;
+
+            img {
+              zoom: .45;
+            }
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          background: url('/../images/arrow.svg') no-repeat;
+          margin-top: -63px;
+          outline: none;
+          height: 16px;
+          top: initial;
+          width: 70px;
+
+          @include media(phone) {
+            margin-top: 0;
+            bottom: 42%;
+          }
+        }
+
+        .swiper-button-prev {
+          transform: rotate(180deg);
+          left: 0;
+        }
+
+        .swiper-button-next {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  // block with map
+  &__map {
+    width: 100%;
+    height: 600px;
+
+    @include media(phone) {
+      height: 305px;
+    }
+
+    .gm-style-cc {
+      display: none;
+    }
+  }
+
+  // block with swiper touch slider on the services page
+  &__services {
+    background-color: $dark;
+    padding: 1.5% 0 3%;
+
+    @include media(phone) {
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 375px;
+      object-fit: cover;
+
+      @include media(phone) {
+        margin-bottom: 15%;
+        height: 312px;
+        width: 100%;
+      }
+    }
+
+    ul {
+      float: right;
+      text-align: right;
+      margin-top: 15.4%;
+
+      @include media(phone) {
+        margin-top: 41.4%;
+        text-align: left;
+        width: 100%;
+      }
+
+      li {
+        &:first-of-type {
+          margin-bottom: 46px;
+        }
+
+        &:last-of-type {
+          margin: 41% 94px 0 0;
+
+          @include media(phone) {
+            margin: 13% 0 0;
+          }
+        }
+
+        span {
+          color: $white;
+          font-size: em(14);
+          letter-spacing: 2px;
+        }
+
+        a:not(.arrow) {
+          @include transition($time);
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          line-height: 42px;
+          font-size: em(24);
+          color: $purple;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .bodycopy {
+      margin-left: 98px;
+      margin-top: 15.4%;
+      line-height: 35px;
+      font-size: em(16);
+      float: left;
+      width: 40%;
+
+      @include media(phone) {
+        letter-spacing: 1px;
+        line-height: 26px;
+        font-size: em(14);
+        margin-left: 0;
+        margin-top: 6%;
+        width: 100%;
+      }
+    }
+
+    .swiper-container {
+      @include media(phone) {
+        padding-top: 36.5%;
+      }
+
+      .swiper-pagination {
+        letter-spacing: 2px;
+        text-align: right;
+        font-size: em(14);
+        bottom: initial;
+        color: $gray;
+        width: 99%;
+        top: 340px;
+
+        @include media(phone) {
+          top: 73px;
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
+        border: 2px solid $white;
+        padding: 16px 24px;
+        outline: none;
+        height: 16px;
+        width: 31px;
+        top: 418px;
+
+        @include media(phone) {
+          padding: 16px 35px;
+          bottom: inherit;
+          top: 46px;
+        }
+      }
+
+      .swiper-button-prev {
+        transform: rotate(180deg);
+        left: initial;
+        right: 81px;
+
+        @include media(phone) {
+          right: initial;
+          left: 0;
+        }
+      }
+
+      .swiper-button-next {
+        right: 0;
+
+        @include media(phone) {
+          left: 103px;
+        }
+      }
+    }
+  }
+
+  // block with swiper touch slider on the blog page
+  &__blog {
+    padding: 4.5% 0 3%;
+
+    @include media(phone) {
+      padding: 0;
+    }
+
+    img {
+      width: 49%;
+      height: 565px;
+      object-fit: cover;
+      float: right;
+
+      @include media(phone) {
+        height: 212px;
+        width: 100%;
+      }
+    }
+
+    .subheading {
+      letter-spacing: 2px;
+      margin-left: 90px;
+      line-height: 46px;
+      font-size: em(33);
+      margin-top: 3.5%;
+      float: left;
+      width: 35%;
+
+      @include media(phone) {
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        font-size: em(24);
+        margin-top: 8.5%;
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    .bodycopy {
+      line-height: 30px;
+      margin-left: 90px;
+      font-size: em(14);
+      margin-top: 3%;
+      float: left;
+      width: 32%;
+
+      @include media(phone) {
+        line-height: 26px;
+        margin-left: 0;
+        margin-top: 7%;
+        width: 100%;
+      }
+    }
+
+    .arrow {
+      margin-left: 181px;
+      margin-top: 4.4%;
+
+      @include media(phone) {
+        margin-top: 18.4%;
+        margin-left: 0;
+      }
+    }
+
+    .container {
+      position: relative;
+
+      @include media(phone) {
+        position: initial;
+      }
+    }
+
+    .swiper-container {
+      @include media(phone) {
+        padding-top: 32.5%;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
+        border: 2px solid $white;
+        padding: 16px 24px;
+        outline: none;
+        top: inherit;
+        height: 16px;
+        width: 31px;
+        bottom: 0;
+
+        @include media(phone) {
+          padding: 16px 35px;
+          bottom: inherit;
+          top: 46px;
+        }
+      }
+
+      .swiper-button-prev {
+        transform: rotate(180deg);
+        left: 181px;
+
+        @include media(phone) {
+          left: 5%;
+        }
+      }
+
+      .swiper-button-next {
+        left: 262px;
+
+        @include media(phone) {
+          left: calc(5% + 103px);
+        }
+      }
+    }
+
+    &--date {
+      width: 8%;
+      float: left;
+      margin-top: 4%;
+
+      @include media(phone) {
+        margin-top: 8%;
+        width: 100%;
+      }
+
+      span {
+        letter-spacing: 1.5px;
+        font-size: em(14);
+        color: $gray;
+
+        @include media(phone) {
+          letter-spacing: 1.5px;
+          line-height: 18px;
+          font-size: em(12);
+        }
+
+        &:last-of-type {
+          display: block;
+          margin-top: 135px;
+
+          @include media(phone) {
+            margin-top: 0;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+
+  // block with post
+  &__post {
+    display: flex;
+    padding-top: 3%;
+
+    @include media(phone) {
+      padding-top: 15%;
+    }
+
+    img {
+      width: 100%;
+      height: 475px;
+      object-fit: cover;
+
+      @include media(phone) {
+        height: 212px;
+      }
+    }
+
+    ul {
+      float: right;
+      margin-top: 1.5%;
+      text-align: right;
+
+      @include media(phone) {
+        justify-content: space-between;
+        margin: 5.5% 0 7.5%;
+        display: flex;
+        width: 100%;
+      }
+
+      li {
+        &:first-of-type {
+          margin-bottom: 10px;
+
+          @include media(phone) {
+            padding-right: 5%;
+            text-align: left;
+            margin-bottom: 0;
+          }
+        }
+
+        span {
+          font-size: em(14);
+          color: $gray-light;
+          letter-spacing: 1.4px;
+        }
+      }
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .bodycopy {
+      margin: 20% 0 12.5% 163px;
+      line-height: 40px;
+      font-size: em(24);
+      float: left;
+      width: 65%;
+
+      @include media(phone) {
+        margin: 8% 0 12.5%;
+        color: $gray-light;
+        line-height: 26px;
+        font-size: em(14);
+        width: 100%;
+      }
+    }
+
+    .swiper-container {
+      padding-bottom: 24%;
+
+      @include media(phone) {
+        padding-bottom: 40%;
+      }
+
+      img {
+        height: 460px;
+
+        @include media(phone) {
+          height: 212px;
+        }
+      }
+
+      p {
+        left: 0;
+        margin-top: 3.5%;
+        font-size: em(12);
+        position: absolute;
+        color: $gray-light;
+        letter-spacing: 1.2px;
+
+        @include media(phone) {
+          width: 75%;
+        }
+      }
+
+      .swiper-pagination {
+        letter-spacing: 2px;
+        text-align: right;
+        font-size: em(14);
+        margin-top: 37px;
+        bottom: inherit;
+        width: inherit;
+        left: inherit;
+        color: $gray;
+        right: 28%;
+
+        @include media(phone) {
+          margin-top: 3.5%;
+          right: 0;
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
+        border: 2px solid $white;
+        padding: 16px 24px;
+        position: inherit;
+        outline: none;
+        float: right;
+        height: 16px;
+        width: 31px;
+        top: 42px;
+
+        @include media(phone) {
+          top: 84px;
+        }
+      }
+
+      .swiper-button-prev {
+        transform: rotate(180deg);
+        left: 2px;
+      }
+
+      .swiper-button-next {
+        right: 0;
+      }
+    }
+
+    &--social {
+      margin-top: 20.5%;
+      float: left;
+
+      @include media(phone) {
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 40%;
+        margin-bottom: 15%;
+        display: flex;
+        margin-top: 0;
+        width: 60%;
+      }
+
+      a {
+        margin-bottom: 35px;
+        display: grid;
+        opacity: .3;
+
+        @include media(phone) {
+          margin-bottom: 0;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &[href*='facebook'] {
+          @include sprite(facebook, social);
+        }
+
+        &[href*='twitter'] {
+          @include sprite(twitter, social);
+        }
+
+        &[href*='pinterest'] {
+          @include sprite(pinterest, social);
+        }
+      }
+    }
+
+    &--content {
+      width: 65%;
+      float: left;
+      margin-left: 193px;
+
+      @include media(phone) {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      > p {
+        color: $white;
+        line-height: 30px;
+        letter-spacing: 1px;
+
+        &:not(.title) {
+          font-size: em(14);
+          margin-bottom: 11%;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        &.title {
+          color: $purple;
+          font-size: em(22);
+          line-height: 30px;
+          margin-bottom: 4%;
+        }
+      }
+    }
+
+    &--scroll {
+      background: url('/../images/up.svg') no-repeat;
+      position: absolute;
+      height: 68px;
+      width: 68px;
+      bottom: 0;
+      right: 0;
+
+      @include media(phone) {
+        display: none;
+      }
+    }
+
+    + .article__publications {
+      padding: 11% 0 14.5%;
+
+      @include media(phone) {
+        padding: 21% 0 56.5%;
+      }
+
+      .container {
+        position: relative;
+
+        > span {
+          top: 0;
+          left: 0;
+          color: $white;
+          font-size: em(14);
+          position: absolute;
+          letter-spacing: 2px;
+        }
+      }
+
+      .article__publications--tiles {
+        width: calc(100% - 193px);
+        margin-left: 193px;
+
+        @include media(phone) {
+          margin-top: 15%;
+          margin-left: 0;
+          width: 100%;
+        }
+
+        > a {
+          margin-bottom: 0;
+
+          @include media(phone) {
+            margin-bottom: 52%;
+            width: 100%;
+          }
+
+          &:last-of-type {
+            @include media(phone) {
+              margin-bottom: 0;
+            }
+          }
+
+          &::before {
+            height: 230px;
+
+            @include media(phone) {
+              display: none;
+            }
+          }
+
+          img {
+            height: 230px;
+
+            @include media(phone) {
+              height: 250px;
+            }
+          }
+
+          p {
+            font-size: em(24);
+            line-height: 34px;
+            margin-top: 5%;
+
+            @include media(phone) {
+              line-height: 31px;
+              font-size: em(18);
+              margin-top: 4.5%;
+            }
+          }
+
+          span {
+            &:first-of-type {
+              margin-top: 3.5%;
+
+              @include media(phone) {
+                margin-top: 6.5%;
+              }
+            }
+
+            &:last-of-type {
+              margin-top: 6%;
+
+              @include media(phone) {
+                margin-top: 0;
+              }
+            }
+          }
+
+          .arrow {
+            top: 105.5px;
+
+            @include media(phone) {
+              margin-top: 33px;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // block with portfolio
+  &__portfolio {
+    background-color: $dark;
+    position: relative;
+    padding-top: 1%;
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+
+      @include media(phone) {
+        margin-top: 19.5%;
+        height: 358px;
+      }
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .swiper-container {
+      > .container {
+        margin-top: -63px;
+
+        @include media(phone) {
+          margin-top: 0;
+        }
+      }
+
+      .swiper-pagination {
+        display: none;
+
+        @include media(phone) {
+          text-align: right;
+          font-size: em(14);
+          display: block;
+          color: $gray;
+          bottom: 35px;
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        height: calc(100% - 20px);
+        padding-top: 20px;
+        outline: none;
+        display: grid;
+        width: 40%;
+        margin: 0;
+        top: 0;
+
+        @include media(phone) {
+          background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
+          border: 2px solid $white;
+          padding: 16px 35px;
+          bottom: inherit;
+          outline: none;
+          height: 16px;
+          width: 31px;
+          top: 46px;
+
+          @include media(phone) {
+            top: 20px;
+          }
+        }
+
+        &:hover span {
+          &:first-of-type,
+          &:last-of-type {
+            color: $purple;
+          }
+        }
+
+        span {
+          @include transition($time);
+          z-index: 1;
+
+          @include media(phone) {
+            display: none;
+          }
+
+          &:first-of-type {
+            letter-spacing: 1px;
+            color: $gray-light;
+            font-size: em(14);
+          }
+
+          &:last-of-type {
+            color: $dark;
+            font-size: em(24);
+            line-height: 52px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        padding-right: 10%;
+        text-align: right;
+        left: 0;
+
+        @include media(phone) {
+          transform: rotate(180deg);
+          padding-right: 35px;
+          left: 0;
+        }
+
+        &::after {
+          content: '';
+          background-color: $gray-light;
+          position: absolute;
+          height: 64%;
+          width: 2px;
+          left: 100%;
+          top: 19%;
+
+          @include media(phone) {
+            display: none;
+          }
+        }
+      }
+
+      .swiper-button-next {
+        padding-left: 10%;
+        right: 0;
+
+        @include media(phone) {
+          padding-left: 35px;
+          left: 103px;
+        }
+      }
+    }
+
+    &--hood {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+      @include media(phone) {
+        padding-top: 4%;
+      }
+
+      @include media(laptop) {
+        padding-top: 1.5%;
+      }
+
+      @include media(large) {
+        padding-top: 4%;
+      }
+
+      span {
+        width: 21%;
+        float: left;
+        margin-top: .7%;
+        line-height: 22px;
+        font-size: em(20);
+        color: $gray-light;
+
+        @include media(phone) {
+          letter-spacing: 1.5px;
+          line-height: 18px;
+          font-size: em(12);
+          margin-top: 0;
+          width: 50%;
+        }
+      }
+
+      a {
+        background: url('/../images/plus.svg') no-repeat;
+        position: absolute;
+        text-align: center;
+        letter-spacing: 2px;
+        padding-top: 83px;
+        font-size: em(14);
+        color: $purple;
+        height: 68px;
+        width: 68px;
+        right: 0;
+        top: 4%;
+
+        @include media(phone) {
+          top: 115px;
+          zoom: .7;
+        }
+      }
+    }
+
+    &--title {
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      font-weight: normal;
+      margin-left: 25.5%;
+      line-height: 72px;
+      font-size: em(64);
+      color: $white;
+      width: 26%;
+
+      @include media(phone) {
+        letter-spacing: 3px;
+        line-height: 33px;
+        font-size: em(23);
+        display: initial;
+        padding-top: 13%;
+        float: left;
+        width: 60%;
+        margin: 0;
+      }
+    }
+
+    &--cellar {
+      position: relative;
+      background-color: $white;
+      margin: 0 auto;
+      height: 119px;
+      width: 83%;
+      z-index: 1;
+
+      @include media(phone) {
+        background-color: transparent;
+        height: 72px;
+        width: 100%;
+      }
+
+      &::before,
+      &::after {
+        background: url('/../images/arrow.svg') no-repeat;
+        position: absolute;
+        outline: none;
+        height: 16px;
+        width: 70px;
+        content: '';
+        top: 50%;
+
+        @include media(phone) {
+          display: none;
+        }
+      }
+
+      &::before {
+        transform: rotate(180deg);
+        left: 10%;
+      }
+
+      &::after {
+        right: 10%;
+      }
+    }
+  }
+
+  // block with catalog
+  &__catalog {
+    background-color: $dark;
+    padding: 18.4% 0 14%;
+    display: flex;
+
+    @include media(phone) {
+      padding: 50.4% 0 0;
+    }
+
+    &--list {
+      width: 24%;
+      float: left;
+
+      @include media(phone) {
+        float: initial;
+        width: 100%;
+      }
+
+      li {
+        margin-bottom: 24.5px;
+        letter-spacing: 1px;
+        line-height: 24px;
+
+        @include media(phone) {
+          margin-top: 25.5px;
+          margin-bottom: 0;
+        }
+
+        &:first-of-type {
+          @include media(phone) {
+            display: none;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        a {
+          @include transition($time);
+          color: $gray;
+
+          &:hover {
+            color: $white;
+          }
+        }
+
+        &.selected {
+          color: $purple;
+          position: relative;
+
+          &::before {
+            content: '';
+            background: $purple;
+            position: absolute;
+            height: 10px;
+            width: 13px;
+            top: 7px;
+            left: 0;
+          }
+
+          a {
+            color: $purple;
+            cursor: default;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+
+    &--tiles {
+      width: 76%;
+      float: left;
+
+      @include media(phone) {
+        margin-top: 10%;
+        width: 100%;
+      }
+
+      a {
+        float: left;
+        display: block;
+        margin-left: 3%;
+        position: relative;
+
+        @include media(phone) {
+          margin-bottom: 24%;
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          @include media(phone) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-of-type(odd) {
+          width: 52%;
+
+          @include media(phone) {
+            width: 100%;
+          }
+        }
+
+        &:nth-of-type(even) {
+          width: 42%;
+
+          @include media(phone) {
+            width: 100%;
+          }
+        }
+
+        &::before {
+          background-color: $dark;
+          position: absolute;
+          height: 350px;
+          opacity: .75;
+          width: 100%;
+          left: 0;
+          top: 0;
+
+          @include media(phone) {
+            display: none;
+          }
+        }
+
+        &::after {
+          @include inline-block;
+          transform: scale(.7206);
+          background: url('/../images/plus.svg') no-repeat;
+          position: absolute;
+          margin: 0 auto;
+          height: 68px;
+          width: 68px;
+          top: 141px;
+          right: 0;
+          left: 0;
+
+          @include media(phone) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          &::after,
+          &::before {
+            content: '';
+          }
+        }
+
+        img {
+          object-fit: cover;
+          height: 350px;
+          width: 100%;
+
+          @include media(phone) {
+            height: 250px;
+          }
+        }
+
+        p {
+          color: $white;
+          margin-top: 2%;
+          font-size: em(24);
+          line-height: 52px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+
+          @include media(phone) {
+            font-size: em(23);
+            line-height: 33px;
+            letter-spacing: 3px;
+          }
+        }
+
+        span {
+          color: $gray;
+          font-size: em(14);
+          letter-spacing: 1px;
+        }
+
+        &.wide {
+          width: 100%;
+          margin-top: 12%;
+          margin-bottom: 12%;
+
+          @include media(phone) {
+            margin-bottom: 24%;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          img {
+            width: 97%;
+          }
+        }
+      }
+    }
+  }
+
+  // block with publications
+  &__publications {
+    padding: 9.5% 0 12.5%;
+    display: flex;
+
+    @include media(phone) {
+      padding: 48.5% 0 56.5%;
+    }
+
+    &--list {
+      width: 100%;
+      display: flex;
+      margin-bottom: 7%;
+      justify-content: space-between;
+
+      @include media(phone) {
+        margin-bottom: 0;
+        display: block;
+      }
+
+      li {
+        margin-bottom: 24.5px;
+        letter-spacing: 1px;
+        line-height: 24px;
+
+        @include media(phone) {
+          margin-top: 25.5px;
+          margin-bottom: 0;
+        }
+
+        &:first-of-type {
+          width: 29%;
+          color: $purple;
+          position: relative;
+
+          @include media(phone) {
+            display: none;
+          }
+
+          &::before {
+            content: '';
+            background: $purple;
+            position: absolute;
+            height: 10px;
+            width: 13px;
+            top: 7px;
+            left: 0;
+          }
+
+          a {
+            color: $purple;
+            cursor: default;
+            margin-left: 30px;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        a {
+          @include transition($time);
+          color: $gray;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &--tiles {
+      @include inline-block;
+      width: 100%;
+
+      @include media(phone) {
+        margin-top: 10%;
+      }
+
+      > a {
+        float: left;
+        width: 48.5%;
+        display: block;
+        position: relative;
+        margin-bottom: 11%;
+
+        @include media(phone) {
+          margin-bottom: 52%;
+          width: 100%;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+
+          @include media(phone) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-of-type(odd) {
+          margin-right: 3%;
+
+          @include media(phone) {
+            margin-right: 0;
+          }
+        }
+
+        &:nth-of-type(even) {
+          margin-right: 0;
+        }
+
+        &::before {
+          background-color: $dark;
+          position: absolute;
+          height: 350px;
+          opacity: .75;
+          width: 100%;
+          left: 0;
+          top: 0;
+
+          @include media(phone) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          &::before {
+            content: '';
+          }
+
+          p {
+            color: $purple;
+          }
+
+          .arrow {
+            display: block;
+          }
+        }
+
+        img {
+          object-fit: cover;
+          height: 350px;
+          width: 100%;
+
+          @include media(phone) {
+            height: 250px;
+          }
+        }
+
+        p {
+          @include transition($time);
+          letter-spacing: 1.5px;
+          line-height: 40px;
+          font-size: em(24);
+          margin-top: 4%;
+          color: $white;
+
+          @include media(phone) {
+            line-height: 31px;
+            font-size: em(18);
+            margin-top: 4.5%;
+          }
+        }
+
+        span {
+          display: block;
+          font-size: em(14);
+          letter-spacing: 1.5px;
+
+          &:first-of-type {
+            color: $white;
+            margin-top: 7%;
+
+            @include media(phone) {
+              margin-top: 6.5%;
+            }
+          }
+
+          &:last-of-type {
+            color: $gray-light;
+            margin-top: 8%;
+
+            @include media(phone) {
+              position: absolute;
+              margin-top: 0;
+              top: 274px;
+              right: 0;
+            }
+          }
+        }
+
+        .arrow {
+          position: absolute;
+          width: inherit;
+          margin: 0 auto;
+          display: none;
+          top: 165.5px;
+          right: 0;
+          left: 0;
+
+          @include media(phone) {
+            position: relative;
+            margin-top: 33px;
+            display: block;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    &--pagination {
+      text-align: center;
+      position: relative;
+
+      @include media(phone) {
+        justify-content: space-between;
+        padding-bottom: 15%;
+        margin-top: 40%;
+        display: flex;
+      }
+
+      a {
+        &:last-of-type,
+        &:first-of-type {
+          content: '';
+          background: url('/../images/arrow.svg') no-repeat;
+          position: absolute;
+          outline: none;
+          height: 16px;
+          width: 70px;
+          bottom: 0;
+        }
+
+        &:first-of-type {
+          transform: rotate(180deg);
+          left: 28%;
+
+          @include media(phone) {
+            left: 0;
+          }
+        }
+
+        &:last-of-type {
+          right: 28%;
+
+          @include media(phone) {
+            right: 0;
+          }
+        }
+
+        &:not(:last-of-type),
+        &:not(:first-of-type) {
+          @include transition($time);
+          letter-spacing: 1px;
+          line-height: 24px;
+          cursor: pointer;
+          margin: 0 6px;
+          color: $white;
+
+          @include media(phone) {
+            letter-spacing: 1.38px;
+            line-height: 24px;
+            font-size: em(22);
+            margin: 0;
+          }
+
+          &:hover {
+            color: $purple;
+          }
+
+          &.selected {
+            color: $purple;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}

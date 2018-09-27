@@ -1,0 +1,105 @@
+::selection {
+  color: $white;
+  background-color: $purple;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  opacity: 0;
+  height: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+  letter-spacing: .5px;
+  font-family: $regular;
+  animation: fade-in $time * 4 $time * 2 forwards;
+  -webkit-tap-highlight-color: $highlight;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  width: $container;
+  max-width: 1145px;
+
+  &--fluid {
+    max-width: $container;
+    width: calc(#{$container} - 5%);
+  }
+}
+
+@include media(phone) {
+  .container {
+    width: calc(#{$container} - 10%);
+
+    &--fluid {
+      width: calc(#{$container} - 20%);
+    }
+  }
+}
+
+@include media(phone, landscape) {
+  .container {
+    width: calc(#{$container} - 35%);
+
+    &--fluid {
+      width: calc(#{$container} - 25%);
+    }
+  }
+}
+
+@include media(biggest) {
+  .container {
+    width: $container;
+  }
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+nav li {
+  @include inline-block;
+}
+
+input,
+button {
+  outline: none;
+}
+
+header {
+  flex: 0 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+article {
+  flex: 1 0 auto;
+}

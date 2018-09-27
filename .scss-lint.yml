@@ -1,0 +1,13 @@
+linters:
+  IdSelector:
+    enabled: false
+  NestingDepth:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  SelectorDepth:
+    enabled: false
+  SelectorFormat:
+    convention: 'hyphenated_BEM'
+  UrlQuotes:
+    enabled: false

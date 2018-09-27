@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="365px" height="383px" viewBox="0 0 365 383" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-581.000000, -1726.000000)">
+      <g transform="translate(583.000000, 1728.000000)">
+        <polygon stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="0.3019 231.0798 139.3929 287.7158 180.3019 263.4428 180.3019 255.3518 41.2109 198.7158 0.3019 222.9888"></polygon>
+        <polygon stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="360.3019 231.0798 221.2109 287.7158 180.3019 263.4428 180.3019 255.3518 319.3929 198.7158 360.3019 222.9888"></polygon>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="58.4806 187.7331 41.3976 196.3611 3.3016 174.2881 6.7806 161.4371 58.4806 136.7161"></polyline>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="304.3019 187.7331 321.3849 196.3611 359.4809 174.2881 356.0019 161.4371 304.3019 136.7161"></polyline>
+        <g transform="translate(42.000000, 247.716000)" stroke="#7361C1" stroke-linejoin="round" stroke-width="4">
+            <path d="M138.3019,16 L138.3019,131"></path>
+            <polyline points="280.3019 0 280.3019 73.688 140.3019 131 0.3019 73.688 0.3019 0"></polyline>
+        </g>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="58.3019 205.1828 58.3019 115.7158 140.3019 148.2488 140.3019 237.7158"></polyline>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="222.3019 237.716 222.3019 115.716 140.3019 148.249 140.3019 221.449"></polyline>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="223.2804 116.1188 140.3014 82.7158 57.8804 116.1188"></polyline>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="221.3019 90.154 221.3019 25.108 163.8019 0.716 106.3019 25.108 106.3019 94.716"></polyline>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="221.3019 26.716 163.8019 52.716 106.3019 26.716"></polyline>
+        <path d="M304.3019,106.716 L222.3019,140.716" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M164.3019,49.716 L164.3019,91.716" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="189.3019 102.236 238.5879 82.716 304.3019 107.116 304.3019 204.716"></polyline>
+        <path d="M84.3019,216.716 L58.3019,163.716" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M110.3019,226.716 L58.3019,126.716" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M138.3019,238.716 L77.3019,122.716" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M140.3019,199.716 L105.3019,133.716" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <polygon fill="#7361C1" points="249.6925 140.3229 259.5785 153.3489 256.9255 155.2939 247.0395 142.2669"></polygon>
+        <polygon fill="#7361C1" points="282.1403 171.0866 292.0263 184.1136 289.3733 186.0576 279.4873 173.0306"></polygon>
+        <polygon fill="#7361C1" points="286.6764 123.7077 296.5624 136.7337 293.9094 138.6787 284.0234 125.6517"></polygon>
+        <polygon fill="#7361C1" points="280.0163 143.1789 277.4433 159.3999 274.1963 158.9689 276.7693 142.7469"></polygon>
+        <polygon fill="#7361C1" points="278.6808 204.5441 276.7908 217.6051 274.1878 217.2221 276.0768 204.1611"></polygon>
+        <polygon fill="#7361C1" points="254.5714 199.8698 262.5374 214.1788 259.6704 215.7778 251.7034 201.4688"></polygon>
+        <polygon fill="#7361C1" points="228.9567 136.5934 230.9007 149.7384 228.0797 150.4784 226.1337 137.3334"></polygon>
+        <polygon fill="#7361C1" points="305.9753 114.278 299.4953 125.232 297.0513 123.238 303.5313 112.284"></polygon>
+        <polygon fill="#7361C1" points="275.5548 185.842 265.7348 199.289 263.0728 197.457 272.8928 184.011"></polygon>
+        <polygon fill="#7361C1" points="241.8029 219.7126 230.1709 231.7116 227.8049 229.5276 239.4379 217.5296"></polygon>
+        <polygon fill="#7361C1" points="239.5524 162.7917 227.9194 174.7897 225.5554 172.6057 237.1874 160.6067"></polygon>
+        <polygon fill="#7361C1" points="299.9235 195.2053 283.4425 198.4563 282.8525 195.3103 299.3335 192.0593"></polygon>
+        <polygon fill="#7361C1" points="271.9391 136.8303 255.5271 133.8563 256.1871 130.7003 272.5991 133.6733"></polygon>
+        <polygon fill="#7361C1" points="269.7213 175.1091 253.3093 172.1351 253.9673 168.9781 270.3803 171.9511"></polygon>
+        <polygon fill="#7361C1" points="240.5968 209.4118 225.8628 201.8998 227.4268 199.0478 242.1598 206.5588"></polygon>
+        <polygon fill="#7361C1" points="234.1559 188.2399 249.0799 181.1029 250.4759 184.0389 235.5519 191.1759"></polygon>
+        <polygon fill="#7361C1" points="303.4005 169.5466 290.4755 159.3796 292.5655 156.8636 305.4905 167.0296"></polygon>
+      </g>
+    </g>
+  </g>
+</svg>

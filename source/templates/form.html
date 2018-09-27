@@ -1,0 +1,44 @@
+<div class="form">
+  <div class="container">
+
+    <!-- subheading -->
+    <h2 class="subheading">Как получить упаковку</h2>
+
+    <!-- block -->
+    <div class="form__block">
+      <div>
+        <p class="wow fade-in-left">Свяжитесь с нами и расскажите, какая упаковка вам нужна</p>
+        <p class="wow fade-in-left" data-wow-delay=".25s">Закажите дизайн и просчет макета, а также количетсво экземпляров</p>
+        <p class="wow fade-in-left" data-wow-delay=".5s">Согласуйте макет, чтобы мы отправили его в печать</p>
+        <p class="wow fade-in-left" data-wow-delay=".75s">Получите готовую уникальную упаковку доставкой по адресу</p>
+      </div>
+
+      <!-- add 'sent' class to to the lower form, when the form is sent -->
+      <form action="#" method="post">
+
+        <!-- input name -->
+        <!-- add 'error' class to to the lower div, when the input is empty -->
+        <div class="form__block--name">
+          <input type="text" name="name" value="Имя" onblur='if (this.value == "")
+          this.value = "Имя"' onfocus='if (this.value == "Имя") this.value = ""' required>
+        </div>
+
+        <!-- input phone -->
+        <!-- add 'error' class to to the lower div, when the input is empty -->
+        <div class="form__block--phone">
+          <input type="text" name="phone" placeholder="Телефон" required>
+        </div>
+
+        <!-- input message -->
+        <!-- add 'error' class to to the lower div, when the input is empty -->
+        <div class="form__block--message">
+          <textarea name="message" rows="1" onblur='if (this.value == "") { this.value = "Сообщение" }'
+          onfocus='if (this.value == "Сообщение") { this.value = "" }' required>Сообщение</textarea>
+        </div>
+
+        <!-- button fill -->
+        <button class="button button--fill" type="submit" value="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+.footer {
+  padding: 3.8% 0;
+  background-color: $dark;
+
+  @include media(phone) {
+    padding: 21.8% 0 10%;
+  }
+
+  &__block {
+    width: 33.33%;
+    float: left;
+
+    @include media(phone) {
+      margin-bottom: 35%;
+      width: 100%;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .button {
+      margin-top: 12%;
+      padding: 19px 83px;
+
+      @include media(phone) {
+        width: calc(100% - 172px);
+        padding: 17px 83px;
+      }
+    }
+
+    &--title {
+      color: $white;
+      font-size: em(19);
+      margin-bottom: 14%;
+      padding-right: 25%;
+
+
+      + p {
+        font-size: em(15);
+        line-height: 1.9;
+        color: $gray-dark;
+      }
+    }
+
+    &--list {
+      padding-right: 25%;
+
+      @include media(phone) {
+        padding-right: 0;
+      }
+
+      li {
+        margin-bottom: 3.4%;
+        font-size: em(15);
+        color: $gray-dark;
+
+        @include media(phone) {
+          margin-bottom: 8%;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        a {
+          @include transition($time);
+          color: $gray-dark;
+
+          &:hover {
+            color: $purple;
+          }
+        }
+
+        &.phone {
+          margin-top: 14%;
+        }
+
+        &.phone,
+        &.mail {
+
+          a {
+            color: $white;
+
+            &:hover {
+              color: $purple;
+            }
+          }
+        }
+
+        &.social {
+          margin-top: 14%;
+
+          a {
+            @include inline-block;
+            margin-right: 4%;
+            height: 28px;
+            width: 28px;
+
+            @include media(phone) {
+              margin-right: 13%;
+              zoom: 1.4;
+            }
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+
+            &[href*='facebook'] {
+              background: url('/../images/facebook.svg');
+            }
+
+            &[href*='instagram'] {
+              background: url('/../images/instagram.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+}

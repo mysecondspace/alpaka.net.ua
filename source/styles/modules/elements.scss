@@ -1,0 +1,726 @@
+.heading {
+  color: $white;
+  font-size: em(72);
+  line-height: 77px;
+  font-weight: normal;
+  letter-spacing: 2.25px;
+
+  @include media(phone) {
+    letter-spacing: 1px;
+    line-height: 47px;
+    font-size: em(40);
+  }
+}
+
+.subheading {
+  color: $white;
+  font-size: em(36);
+  line-height: 77px;
+  font-weight: normal;
+
+  &--dark {
+    color: $dark;
+  }
+
+  + span {
+    right: 0;
+    top: 36px;
+    color: $white;
+    font-size: em(14);
+    position: absolute;
+    letter-spacing: 2px;
+
+    @include media(phone) {
+      display: none;
+    }
+  }
+}
+
+.bodycopy {
+  color: $white;
+  font-size: em(14);
+  line-height: 30px;
+  font-weight: normal;
+  letter-spacing: 1px;
+
+  @include media(phone) {
+    font-size: em(14);
+    line-height: 26px;
+    color: $gray-light;
+  }
+
+  &__second {
+    line-height: 24px;
+    font-size: em(16);
+  }
+
+  &--dark {
+    color: $dark;
+  }
+}
+
+.h2 {
+  color: $white;
+  font-size: em(30);
+  line-height: 52px;
+  font-family: $light;
+  font-weight: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  @include media(phone) {
+    font-size: em(23);
+    line-height: 40px;
+    letter-spacing: 3px;
+  }
+
+  &__services {
+    background-color: $white;
+    letter-spacing: 3px;
+    padding: 31px 35px;
+    position: absolute;
+    margin-top: -78px;
+    font-size: em(24);
+    line-height: 42px;
+    color: $dark;
+    width: 34%;
+    left: 98px;
+
+    @include media(phone) {
+      background-color: transparent;
+      letter-spacing: 3px;
+      line-height: 40px;
+      font-size: em(23);
+      position: inherit;
+      color: $white;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      left: 0;
+    }
+  }
+
+  &__post {
+    text-transform: initial;
+    background-color: $white;
+    font-family: $regular;
+    letter-spacing: 3px;
+    padding: 38px 95px;
+    position: absolute;
+    margin-top: -78px;
+    font-size: em(32);
+    line-height: 42px;
+    color: $dark;
+    width: 41%;
+    left: 98px;
+
+    @include media(phone) {
+      background-color: transparent;
+      letter-spacing: 1.2px;
+      line-height: 30px;
+      font-size: em(24);
+      position: inherit;
+      display: initial;
+      color: $white;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      left: 0;
+    }
+
+  }
+
+  &--dark {
+    color: $dark;
+  }
+}
+
+.h3 {
+  color: $gray;
+  font-size: em(32);
+  font-weight: normal;
+
+  @include media(phone) {
+    color: $gray-light;
+    font-size: em(24);
+  }
+}
+
+%arrow,
+.arrow {
+  @include inline-block;
+  letter-spacing: 2px;
+  position: relative;
+  font-size: em(14);
+  color: $purple;
+
+  &::after {
+    content: '';
+    background: url('/../images/arrow.svg');
+    top: calc(50% - 7px);
+    position: absolute;
+    margin-left: 25px;
+    height: 16px;
+    width: 70px;
+
+    @include media(phone) {
+      margin-left: 31px;
+    }
+  }
+
+  &:hover {
+    color: $purple-light;
+  }
+
+  &:active {
+    color: $purple-dark;
+  }
+
+  &--back {
+    padding-left: 95px;
+
+    &::after {
+      transform: rotate(180deg);
+      margin: 0;
+      left: 0;
+    }
+  }
+}
+
+.button {
+  @include inline-block;
+  @include transition($time);
+  letter-spacing: 2px;
+  font-size: em(16);
+  cursor: pointer;
+
+  @include media(phone) {
+    text-align: center;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  &:active {
+    background-color: $purple-dark;
+    border-color: $purple-dark;
+    color: $white;
+  }
+
+  &--clear {
+    padding: 11px 39px;
+    border: 3px solid;
+    color: $purple;
+
+    &:hover {
+      background-color: $purple;
+      border-color: $purple;
+    }
+  }
+
+  &--fill {
+    background-color: $purple;
+    padding: 14px 44px;
+    color: $white;
+
+    @include media(phone) {
+      width: calc(100% - 88px);
+      padding: 19px 44px;
+    }
+
+    &:hover {
+      background-color: $purple-light;
+      border-color: $purple-light;
+    }
+
+    &:active {
+      background-color: $purple-dark;
+      border-color: $purple-dark;
+      color: $white;
+    }
+  }
+}
+
+.layer {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  > img {
+    object-fit: cover;
+    width: 100%;
+
+    @include media(phone) {
+      height: 800px;
+    }
+  }
+
+  &.main-page > img {
+    @include media(phone) {
+      object-position: 77%;
+    }
+  }
+
+  &.about-page > img {
+    @include media(phone) {
+      object-position: 88%;
+    }
+  }
+
+  &--image {
+    background-color: $dark;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    @include media(phone) {
+      padding-bottom: 50%;
+    }
+
+    .container {
+      position: relative;
+
+      img {
+        position: absolute;
+        width: auto;
+        top: 200px;
+        right: 0;
+
+        @include media(phone) {
+          width: 90%;
+          left: 5%;
+          top: 60%;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  background-color: $modal;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  .container {
+    animation: fade-in-up-reverse $time * 2;
+    background-color: lighten($dark, 5%);
+    align-items: center;
+    position: relative;
+    display: flex;
+    opacity: 0;
+
+    @include media(phone) {
+      margin: 5% auto;
+      display: block;
+    }
+
+    @include media(laptop) {
+      margin: 2% auto;
+    }
+
+    @include media(large) {
+      margin: 10% auto;
+    }
+  }
+
+  .subheading {
+    @include media(phone) {
+      font-size: em(24);
+    }
+  }
+
+  .bodycopy {
+    margin-top: 4%;
+  }
+
+  .form {
+    width: 50%;
+    padding: 75px;
+    background: transparent;
+
+    @include media(phone) {
+      width: calc(100% - 50px);
+      padding: 25px;
+    }
+
+    &__block {
+      margin: 0;
+
+      form {
+        width: 100%;
+
+        @include media(phone) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__content {
+    width: 50%;
+    padding-left: 75px;
+
+    @include media(phone) {
+      width: calc(100% - 50px);
+      padding: 25px;
+    }
+  }
+
+  &__close {
+    background: url('/../images/close.svg') no-repeat;
+    position: absolute;
+    cursor: pointer;
+    height: 28px;
+    width: 29px;
+    right: 25px;
+    top: 25px;
+
+    @include media(phone) {
+      height: 15px;
+      width: 15px;
+      zoom: .8;
+    }
+  }
+
+  &.opened > div {
+    animation: fade-in-up $time * 2 $time / 2;
+    animation-fill-mode: forwards;
+  }
+}
+
+.form {
+  @include background(linear-gradient(top, $dark, $dark, $purple-dark));
+  padding: 8.5% 0 12%;
+
+  @include media(phone) {
+    padding: 44.5% 0 56.5%;
+  }
+
+  .subheading {
+    @include media(phone) {
+      font-size: em(24);
+    }
+  }
+
+  &__block {
+    margin-top: 11.4%;
+    display: flex;
+
+    @include media(phone) {
+      margin-top: 7.4%;
+      display: grid;
+    }
+
+    &--name,
+    &--phone,
+    &--message {
+      width: 100%;
+      position: relative;
+
+      &::after,
+      &::before {
+        visibility: hidden;
+        position: absolute;
+        line-height: 30px;
+        content: '';
+      }
+
+      &::before {
+        font-size: em(12);
+        color: $gray-light;
+        position: absolute;
+        left: 35.5px;
+        top: 5px;
+
+        @include media(phone) {
+          display: none;
+        }
+      }
+
+      &::after {
+        background-color: $red;
+        padding: 7px 32px;
+        font-size: em(14);
+        color: $white;
+        top: -20.5px;
+        right: 10px;
+
+        @include media(phone) {
+          padding: 0 32px;
+          top: -18.5px;
+        }
+      }
+
+      &:focus-within {
+        &::before {
+          visibility: visible;
+        }
+
+        input,
+        textarea {
+          border-color: $white;
+        }
+      }
+
+      &.error {
+        &::after {
+          visibility: visible;
+        }
+
+        input,
+        textarea, {
+          border-color: $red;
+        }
+      }
+    }
+
+    &--name {
+      &::before {
+        content: 'Имя';
+      }
+
+      &::after {
+        content: 'Заполните ваше имя';
+      }
+    }
+
+    &--phone {
+      &::before {
+        content: 'Телефон';
+      }
+
+      &::after {
+        content: 'Заполните ваш телефон';
+      }
+    }
+
+    &--message {
+      &::before {
+        content: 'Сообщение';
+      }
+
+      &::after {
+        content: 'Оставьте нам сообщение';
+      }
+    }
+
+    > div {
+      width: 51.5%;
+
+      @include media(phone) {
+        width: 100%;
+      }
+
+      p {
+        padding: 13px 29% 0 128px;
+        margin-bottom: 61px;
+        position: relative;
+        line-height: 30px;
+        color: $white;
+
+        @include media(phone) {
+          font-size: em(14);
+          line-height: 26px;
+          color: $gray-light;
+          margin-bottom: 35px;
+          padding: 4px 0 0 82px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          font-size: em(60);
+          text-align: right;
+          color: darken($purple-dark, 15%);
+          background-color: $gray-light;
+          position: absolute;
+          padding-top: 28px;
+          height: 35px;
+          width: 66px;
+          left: 0;
+          top: 0;
+
+          @include media(phone) {
+            padding-top: 18px;
+            font-size: em(50);
+            height: 28px;
+            width: 50px;
+          }
+        }
+
+        &:nth-of-type(1)::before {
+          content: '1';
+        }
+
+        &:nth-of-type(2)::before {
+          content: '2';
+        }
+
+        &:nth-of-type(3)::before {
+          content: '3';
+        }
+
+        &:nth-of-type(4)::before {
+          content: '4';
+        }
+      }
+    }
+
+    form {
+      position: relative;
+      display: grid;
+      width: 48.5%;
+
+      @include media(phone) {
+        margin-top: 32%;
+        width: 100%;
+      }
+
+      input,
+      textarea {
+        @include transition($time);
+        @include border-radius(0);
+        border: 3px solid $purple;
+        width: calc(100% - 70px);
+        font-size: em(16);
+        background: none;
+        padding: 0 32px;
+        outline: none;
+        color: $white;
+
+        @include media(phone) {
+          width: calc(100% - 46px);
+          padding: 0 20px;
+        }
+      }
+
+      input {
+        height: 88px;
+        outline: none;
+        line-height: 30px;
+        margin-bottom: 15px;
+        font-size: em(18);
+
+        @include media(phone) {
+          margin-bottom: 10px;
+          height: 54px;
+        }
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+
+      textarea {
+        height: 95px;
+        resize: none;
+        padding-top: 73px;
+
+        @include media(phone) {
+          padding-top: 18px;
+        }
+      }
+
+      .button {
+        border: 0;
+        padding: 0;
+        width: 100%;
+        height: 72px;
+        cursor: pointer;
+        margin-top: 15px;
+
+        @include media(phone) {
+          margin-top: 5px;
+          height: 60px;
+        }
+      }
+
+      &.sent {
+        &::after,
+        &::before {
+          z-index: 1;
+          width: 100%;
+          position: absolute;
+        }
+
+        &::before {
+          content: '';
+          background: url('/../images/sent.svg') 50% 40% no-repeat;
+          background-color: $purple;
+          height: 100%;
+          left: 0;
+          top: 0;
+        }
+
+        &::after {
+          content: 'Заявка успешно отправлена';
+          text-align: center;
+          font-size: em(22);
+          color: $white;
+          bottom: 35%;
+
+          @include media(phone) {
+            bottom: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dd {
+  outline: none;
+  color: $purple;
+  cursor: pointer;
+  border: 3px solid;
+  position: relative;
+  letter-spacing: 1px;
+  padding: 28px 17px;
+  line-height: 20px;
+
+    &::after {
+      @include transition($time);
+      background: url('/../images/dropdown.svg') no-repeat;
+      position: absolute;
+      height: 14px;
+      content: '';
+      right: 20px;
+      width: 21px;
+      top: 33px;
+    }
+
+    .dropdown {
+      display: none;
+      max-height: 0;
+      z-index: 10000;
+      list-style: none;
+      overflow: hidden;
+      background-color: $dark;
+
+      a {
+        color: $white;
+      }
+    }
+    &.active {
+      &:after {
+        transform: rotate(180deg);
+      }
+      .dropdown {
+        display: block;
+        min-height: fit-content;
+      }
+    }
+}

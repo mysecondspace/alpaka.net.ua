@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1465.000000, -370.000000)">
+      <g transform="translate(1465.000000, 370.000000)">
+        <g stroke="#7361C1" stroke-width="6">
+          <g>
+            <g>
+              <g>
+                <rect x="3" y="3" width="62" height="62"></rect>
+              </g>
+            </g>
+          </g>
+        </g>
+        <rect fill="#7361C1" x="15" y="32" width="38" height="6"></rect>
+        <rect fill="#7361C1" transform="translate(34.000000, 34.000000) rotate(-270.000000) translate(-34.000000, -34.000000) " x="15" y="31" width="38" height="6"></rect>
+      </g>
+    </g>
+  </g>
+</svg>

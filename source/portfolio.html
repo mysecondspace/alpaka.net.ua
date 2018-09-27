@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alpaka | Портфолио работ</title>
+    //= templates/head.html
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <!-- header -->
+      <header id="header" class="header header--dark">
+
+        <!-- panel with logotype and menu -->
+        <nav class="header__hood">
+          //= templates/hood.html
+        </nav>
+
+        <!-- panel with bottom elements on the portfolio page -->
+        <div class="header__cellar portfolio-page">
+          <div class="container">
+
+            <!-- subheading -->
+            <h1 class="subheading">Портфолио</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- article -->
+      <article id="article" class="article">
+
+        <!-- portfolio -->
+        <div class="article__portfolio">
+
+          <!-- swiper touch slider -->
+          <div id="swiper" class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+
+                <!-- hood -->
+                <div class="article__portfolio--hood">
+                  <div class="container">
+                    <span>Упаковка для продуктов питания</span>
+                    <h2 class="article__portfolio--title">O'su Yogurt</h2>
+                    <a href="#">Больше</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+
+                <!-- hood -->
+                <div class="article__portfolio--hood">
+                  <div class="container">
+                    <span>Упаковка для продуктов питания</span>
+                    <h2 class="article__portfolio--title">O'su Yogurt</h2>
+                    <a href="#">Больше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+
+              <!-- cellar -->
+              <div class="article__portfolio--cellar">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                  <span>Доставка еды</span>
+                  <span>Sushiya</span>
+                </div>
+                <div class="line"></div>
+                <div class="swiper-button-next">
+                  <span>Постельное белье</span>
+                  <span>Eney Plus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- catalog -->
+        <div class="article__catalog">
+          <div class="container">
+
+            <!-- list -->
+            <ul class="article__catalog--list">
+              <li class="selected">
+                <a href="#">Все упаковки</a>
+              </li>
+              <li>
+                <a href="#">Для сувениров</a>
+              </li>
+              <li>
+                <a href="#">Для текстиля</a>
+              </li>
+              <li>
+                <a href="#">Для продуктов питания</a>
+              </li>
+              <li>
+                <a href="#">Для бытовой химии</a>
+              </li>
+              <li>
+                <a href="#">Для других товаров</a>
+              </li>
+              <li>
+                <a href="#">Для доставки еды</a>
+              </li>
+              <li>
+                <a href="#">Бумажные пакеты с ручками</a>
+              </li>
+            </ul>
+
+            <!-- tiles -->
+            <div class="article__catalog--tiles">
+              <a href="#">
+                <img src="images/portfolio-2.jpg" alt="Soxy">
+                <p>Soxy</p>
+                <span>Текстиль</span>
+              </a>
+              <a href="#">
+                <img src="images/portfolio-3.jpg" alt="Chocolato">
+                <p>Chocolato</p>
+                <span>Продукты питания</span>
+              </a>
+              <a href="#" class="wide">
+                <img src="images/portfolio-4.jpg" alt="Wally Home">
+                <p>Wally Home</p>
+                <span>Другие товары</span>
+              </a>
+              <a href="#">
+                <img src="images/portfolio-5.jpg" alt="Kute Cake">
+                <p>Kute Cake</p>
+                <span>Доставка еды</span>
+              </a>
+              <a href="#">
+                <img src="images/portfolio-6.jpg" alt="Artisans & Co.">
+                <p>Artisans & Co.</p>
+                <span>Бумажные пакеты</span>
+              </a>
+              <a href="#" class="wide">
+                <img src="images/portfolio-7.jpg" alt="The Tea Life">
+                <p>The Tea Life</p>
+                <span>Продукты питания</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- form -->
+        //= templates/form.html
+      </article>
+
+      <!-- footer -->
+      //= templates/footer.html
+    </div>
+
+    <!-- script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpTfzEfoNeVlnJhNyZCHOlMSEl5BrFyUQ"></script>
+    <script src="scripts/main.min.js"></script>
+  </body>
+</html>

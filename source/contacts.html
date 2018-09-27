@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alpaka | Контакты</title>
+    //= templates/head.html
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <!-- header -->
+      <header id="header" class="header header--dark">
+
+        <!-- panel with logotype and menu -->
+        <nav class="header__hood">
+          //= templates/hood.html
+        </nav>
+
+        <!-- panel with bottom elements on the contacts page -->
+        <div class="header__cellar contacts-page">
+          <div class="container">
+
+            <!-- subheading -->
+            <h1 class="subheading">Контакты</h1>
+
+            <!-- information block on the contacts page -->
+            <div class="contacts">
+
+              <!-- phone block on the contacts page -->
+              <div class="contacts--phone">
+                <a href="tel:+380934567867">+380934567867</a>
+                <a href="tel:+380934567867">+380934567867</a>
+              </div>
+
+              <!-- office block on the contacts page -->
+              <div class="contacts--office">
+                <p>Офис:</p>
+                <p>Адрес: 03045, Украина, г. Киев</p>
+                <p>ул. Плещеева, 10</p>
+              </div>
+
+              <!-- link block on the contacts page -->
+              <div class="contacts--link">
+                <a href="#" class="arrow" target="_blank">На карте</a>
+              </div>
+
+              <!-- mail block on the contacts page -->
+              <div class="contacts--mail">
+                <a href="mailto:alpaka@gmail.com">alpaka@gmail.com</a>
+              </div>
+
+              <!-- manufacture block on the contacts page -->
+              <div class="contacts--manufacture">
+                <p>Производство:</p>
+                <p>Адрес: 37500, Украина, г. Киев</p>
+                <p>ул. Плещеева, 10</p>
+              </div>
+
+              <!-- link block on the contacts page -->
+              <div class="contacts--link">
+                <a href="#" class="arrow" target="_blank">На карте</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- article -->
+      <article id="article" class="article">
+
+        <!-- map -->
+        <div id="map" class="article__map"></div>
+
+        <!-- form -->
+        //= templates/form.html
+      </article>
+
+      <!-- footer -->
+      //= templates/footer.html
+    </div>
+
+    <!-- script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpTfzEfoNeVlnJhNyZCHOlMSEl5BrFyUQ"></script>
+    <script src="scripts/main.min.js"></script>
+  </body>
+</html>

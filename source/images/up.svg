@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+    <g transform="translate(-1465.000000, -3758.000000)">
+      <g transform="translate(1465.000000, 3758.000000)">
+        <rect stroke="#7361C1" stroke-width="6" x="3" y="3" width="62" height="62"></rect>
+        <rect fill="#7361C1" transform="translate(34.000000, 34.000000) rotate(-270.000000) translate(-34.000000, -34.000000) " x="15" y="31" width="38" height="6"></rect>
+        <polyline stroke="#7361C1" stroke-width="5" points="17.3478663 29.1052448 34.1940714 14.9820703 50.769505 29.1052448"></polyline>
+      </g>
+    </g>
+  </g>
+</svg>

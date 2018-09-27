@@ -1,0 +1,413 @@
+.header {
+  height: 100vh;
+  position: relative;
+
+  @include media(phone) {
+    height: auto;
+  }
+
+  // added dark background
+  &--dark {
+    height: auto;
+    background-color: $dark;
+  }
+
+  // anchor down
+  &__scroll {
+    color: $gray-dark;
+    font-family: $light;
+    position: absolute;
+    margin: 0 auto;
+    height: 35px;
+    width: 42px;
+    z-index: 1;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+
+    @include media(phone) {
+      display: none;
+    }
+
+    &::before {
+      animation-iteration-count: infinite;
+      animation-duration: 1.5s;
+      animation-name: scroll;
+      background: $gray-dark;
+      position: absolute;
+      margin: 0 auto;
+      content: '';
+      height: 20px;
+      width: 1px;
+      top: 25px;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  // panel with logotype and menu
+  &__hood {
+    display: flex;
+    padding-top: 2.2%;
+
+    @include media(phone) {
+      padding-top: 0;
+
+      // mobile menu burger button
+      &--burger {
+        z-index: 3;
+        float: right;
+        margin-top: 21px;
+        position: relative;
+
+        .open {
+          background: url('/../images/burger.svg') no-repeat;
+          cursor: pointer;
+          height: 20px;
+          width: 28px;
+        }
+
+        .close {
+          background: url('/../images/close.svg') no-repeat;
+          cursor: pointer;
+          display: none;
+          height: 28px;
+          width: 29px;
+        }
+      }
+    }
+
+    &.dark-elements {
+      [href*='tel'] {
+        color: $dark;
+
+        &:hover {
+          color: $purple;
+        }
+      }
+    }
+
+    &--logo {
+      float: left;
+      width: 108px;
+      height: 74px;
+      position: relative;
+      margin-right: 7.6%;
+
+      @include media(phone) {
+        margin-top: 7.5%;
+        zoom: .8;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &--menu {
+      float: left;
+      height: 34px;
+      display: flex;
+      align-items: flex-end;
+
+      @include media(phone) {
+        background-color: $dark;
+        position: fixed;
+        padding: 10% 5%;
+        display: none;
+        height: 100%;
+        float: none;
+        width: 90%;
+        z-index: 2;
+        left: 0;
+        top: 0;
+      }
+
+      li {
+        @include media(phone) {
+          display: block;
+        }
+
+        a {
+          @include transition($time);
+          white-space: nowrap;
+          margin-left: 34px;
+          font-size: em(13);
+          color: $gray-dark;
+
+          @include media(phone) {
+            letter-spacing: 1px;
+            font-size: em(20px);
+            line-height: 57px;
+            margin-left: 0;
+            color: $white;
+          }
+
+          &:focus,
+          &:hover {
+            color: $purple;
+          }
+        }
+
+        &:first-of-type a {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &--buttons {
+      float: right;
+      display: flex;
+      align-items: center;
+
+      @include media(phone) {
+        text-align: center;
+        position: fixed;
+        display: none;
+        bottom: 10%;
+        z-index: 3;
+        width: 90%;
+
+        .button {
+          width: calc(100% - 84px);
+        }
+      }
+
+      [href*='tel'] {
+        @include transition($time);
+        margin-right: 50px;
+        font-size: em(14);
+        color: $white;
+
+        @include media(phone) {
+          margin-bottom: 5%;
+          font-size: em(18);
+          line-height: 24px;
+          margin-right: 0;
+          display: block;
+        }
+
+        &:hover {
+          color: $purple;
+        }
+      }
+    }
+  }
+
+  // panel with bottom elements
+  &__cellar {
+    &.main-page {
+      margin-top: 7.6%;
+
+      @include media(phone) {
+        margin-top: 70.6%;
+      }
+
+      .heading {
+        width: 40%;
+
+        @include media(phone) {
+          width: 100%;
+        }
+      }
+
+      .bodycopy {
+        width: 30%;
+        margin-top: 4%;
+
+        @include media(phone) {
+          margin-top: 10%;
+          width: 100%;
+        }
+      }
+
+      .button {
+        margin-top: 8.8%;
+
+        @include media(phone) {
+          margin-top: 22%;
+        }
+      }
+    }
+
+    &.contacts-page {
+      margin: 3.8% 0 5.3%;
+
+      @include media(phone) {
+        margin: 11.8% 0 5.3%;
+      }
+
+      .contacts {
+        @include inline-block;
+        margin-top: 11%;
+        width: 100%;
+
+        @include media(phone) {
+          display: grid;
+        }
+
+        > div {
+          width: calc(33.33% - 50px);
+          margin-bottom: 75px;
+          padding-left: 50px;
+          position: relative;
+          height: 75px;
+          float: left;
+
+          @include media(phone) {
+            width: calc(100% - 50px);
+            margin-bottom: 32px;
+            display: list-item;
+            height: auto;
+
+            &:last-of-type {
+              margin-bottom: 80px;
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+
+          span {
+            color: $white;
+            font-size: em(17);
+          }
+
+          p {
+            color: $white;
+            display: block;
+            font-size: em(13);
+            margin-bottom: 9px;
+
+            @include media(phone) {
+              font-size: em(14);
+            }
+
+            &:first-of-type {
+              margin-bottom: 15px;
+            }
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+
+          a:not(.arrow) {
+            @include transition($time);
+            margin-bottom: 12px;
+            font-size: em(17);
+            display: block;
+            color: $white;
+
+            &:hover {
+              color: $purple;
+            }
+          }
+        }
+
+        .arrow {
+          position: absolute;
+          bottom: 0;
+        }
+
+        &--phone::before {
+          background: url('/../images/phone.svg');
+          height: 23px;
+          width: 24px;
+        }
+
+        &--office::before {
+          background: url('/../images/office.svg');
+          height: 19px;
+          width: 24px;
+        }
+
+        &--mail::before {
+          background: url('/../images/mail.svg');
+          height: 16px;
+          width: 24px;
+        }
+
+        &--manufacture::before {
+          background: url('/../images/manufacture.svg');
+          height: 25px;
+          width: 26px;
+        }
+      }
+    }
+
+    &.blog-page,
+    &.services-page,
+    &.portfolio-page {
+      margin-top: 3.8%;
+
+      @include media(phone) {
+        margin-top: 11.8%;
+      }
+    }
+
+    &.blog-page .container {
+      position: relative;
+    }
+
+    &.post-page {
+      margin-top: 4.8%;
+
+      @include media(phone) {
+        margin-top: 21.8%;
+      }
+    }
+
+    &.about-page {
+      margin-top: 6.5%;
+
+      @include media(phone) {
+        margin-top: 70.5%;
+      }
+
+      .bodycopy {
+        width: 40%;
+        margin-top: 4%;
+
+        @include media(phone) {
+          margin-top: 7%;
+          width: 100%;
+        }
+      }
+    }
+
+    &.error-page {
+      margin-top: 9.5%;
+
+      @include media(phone) {
+        margin: 15.5% 0;
+      }
+
+      .bodycopy {
+        width: 30%;
+        margin-top: 4%;
+
+        @include media(phone) {
+          width: 100%;
+        }
+      }
+
+      .button {
+        margin-top: 12%;
+
+        @include media(phone) {
+          margin-top: 90%;
+        }
+      }
+    }
+  }
+}
