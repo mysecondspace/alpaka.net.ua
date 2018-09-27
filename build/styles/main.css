@@ -166,7 +166,7 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 .modal__content { width: 50%; padding-left: 75px; }
 @media only screen and (max-width: 767px) { .modal__content { width: calc(100% - 50px); padding: 25px; } }
 .modal__close { background: url("../images/close.svg") no-repeat; position: absolute; cursor: pointer; height: 28px; width: 29px; right: 25px; top: 25px; }
-@media only screen and (max-width: 767px) { .modal__close { height: 15px; width: 15px; zoom: .8; } }
+@media only screen and (max-width: 767px) { .modal__close { right: 15px; top: 15px; zoom: .8; } }
 .modal.opened > div { animation: fade-in-up 0.4s 0.1s; animation-fill-mode: forwards; }
 
 .form { background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA5MDkwOSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDkwOTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDgzYzdiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'); background: linear-gradient(to bottom, #090909, #090909, #483c7b); padding: 8.5% 0 12%; }
