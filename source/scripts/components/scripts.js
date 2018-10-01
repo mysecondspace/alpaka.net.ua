@@ -6,8 +6,6 @@ jQuery(function($) {
   $("input[name='phone']").mask("XXX XXX XX XX");
 });
 
-
-
 // only for mobile version
 if (screen.width < 768) {
 

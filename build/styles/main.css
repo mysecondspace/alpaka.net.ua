@@ -460,7 +460,7 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 @media only screen and (max-width: 767px) { .article__portfolio--hood { padding-top: 4%; } }
 @media only screen and (min-width: 1024px) { .article__portfolio--hood { padding-top: 1.5%; } }
 @media only screen and (min-width: 1440px) { .article__portfolio--hood { padding-top: 4%; } }
-.article__portfolio--hood span { width: 21%; float: left; margin-top: .7%; line-height: 22px; font-size: 1.25em; color: #b6b6b6; }
+.article__portfolio--hood span { width: 21%; float: left; margin-top: .7%; line-height: 22px; font-size: 1.25em; color: #979797; }
 @media only screen and (max-width: 767px) { .article__portfolio--hood span { letter-spacing: 1.5px; line-height: 18px; font-size: 0.75em; margin-top: 0; width: 50%; } }
 .article__portfolio--hood a { background: url("../images/plus.svg") no-repeat; position: absolute; text-align: center; letter-spacing: 2px; padding-top: 83px; font-size: 0.875em; color: #7361c1; height: 68px; width: 68px; right: 0; top: 4%; }
 @media only screen and (max-width: 767px) { .article__portfolio--hood a { top: 115px; zoom: .7; } }
