@@ -175,20 +175,6 @@
       .arrow {
         margin-top: 21%;
       }
-
-      &--icons {
-        margin-top: 10%;
-
-        + div {
-          margin: 8.5% 0 0 10%;
-
-          @include media(phone) {
-            margin-top: 6.5%;
-            margin-left: 0;
-            width: 100%;
-          }
-        }
-      }
     }
 
     // block with swiper touch slider on the blog page
@@ -279,51 +265,124 @@
       }
     }
 
-    &--icons {
-      width: 50%;
-      float: left;
+    &--tabs {
       display: flex;
       margin-top: 17%;
+      position: relative;
+      --svg-size: 73px;
+      --row-gap: 45px;
 
       @include media(phone) {
         margin-top: 8%;
         display: block;
-        width: 100%;
-        zoom: .8;
       }
 
-      > div {
-        &:first-of-type {
-          display: grid;
-          grid-row-gap: 45px;
-
-          @include media(phone) {
-            justify-content: space-between;
-            display: flex;
-          }
-        }
-
-        &:last-of-type {
-          margin-left: 21%;
-
-          @include media(phone) {
-            text-align: center;
-            margin-top: 13%;
-            margin-left: 0;
-            zoom: .8;
-          }
-        }
-      }
-
-      + div {
-        width: 37%;
-        float: left;
-        margin: 15.5% 0 0 10%;
+      label {
+        @include inline-block;
+        height: var(--svg-size);
+        width: var(--svg-size);
+        position: absolute;
+        cursor: pointer;
 
         @include media(phone) {
-          margin-top: 6.5%;
+          position: initial;
+          width: 24%;
+          zoom: .8;
+        }
+      }
+
+      section {
+        margin-left: 21%;
+        display: none;
+        float: left;
+
+        @include media(phone) {
           margin-left: 0;
-          width: 100%;
+        }
+
+        object {
+          float: left;
+          width: 385px;
+          height: 405px;
+
+          @include media(phone) {
+            margin: 13% auto 0;
+            zoom: .6;
+          }
+
+          + div {
+            width: 37%;
+            float: right;
+
+            @include media(phone) {
+              margin-top: 6.5%;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      #tab-1:checked ~ #content-1,
+      #tab-2:checked ~ #content-2,
+      #tab-3:checked ~ #content-3,
+      #tab-4:checked ~ #content-4 {
+        position: relative;
+        display: block;
+        left: 0;
+
+        @include media(phone) {
+          display: grid;
+        }
+      }
+
+      #tab-1,
+      #tab-2,
+      #tab-3,
+      #tab-4 {
+        display: none;
+      }
+
+      #tab-1 {
+        &:checked + label {
+          background: url(/../images/advantages-small-hover-1.svg) 50% no-repeat;
+        }
+
+        + label {
+          background: url(/../images/advantages-small-1.svg) 50% no-repeat;
+          top: 0;
+        }
+      }
+
+      #tab-2 {
+        &:checked + label {
+          background: url(/../images/advantages-small-hover-2.svg) 50% no-repeat;
+        }
+
+        + label {
+          background: url(/../images/advantages-small-2.svg) 50% no-repeat;
+          top: calc(var(--row-gap) + var(--svg-size));
+        }
+      }
+
+      #tab-3 {
+        &:checked + label {
+          background: url(/../images/advantages-small-hover-3.svg) 50% no-repeat;
+        }
+
+        + label {
+          background: url(/../images/advantages-small-3.svg) 50% no-repeat;
+          top: calc(var(--row-gap) * 2 + var(--svg-size) * 2);
+        }
+      }
+
+      #tab-4 {
+        &:checked + label {
+          background: url(/../images/advantages-small-hover-4.svg) 50% no-repeat;
+        }
+
+        + label {
+          background: url(/../images/advantages-small-4.svg) 50% no-repeat;
+          top: calc(var(--row-gap) * 3 + var(--svg-size) * 3);
         }
       }
     }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="385px" height="325px" viewBox="0 0 385 325" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1469.000000, -5329.000000)">
+      <g transform="translate(1471.000000, 5331.000000)">
+        <path d="M42,261.676471 C42,259.388912 33.8604,258.215588 28.644,258.215588 C12.8184,258.215588 0,271.105265 0,287 L0,25.3235294 C0,9.42879412 12.8184,0 28.644,0 C33.8604,0 42,2.48170588 42,8.44117647 L42,261.676471 Z" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <polyline stroke="#7361C1" stroke-width="4" stroke-linejoin="round" points="310 152 310 34 42 34"></polyline>
+        <path d="M0,287.333333 C0,305.92575 15.0056757,321 33.5135135,321 L310,321 L310,220" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M371.234818,124.49506 C380.054713,133.424109 381.475928,141.803028 380.882362,146.441055 L268.564552,260.131977 C248.241173,280.706877 218.036168,278.963385 218.036168,278.963385 C218.036168,278.963385 216.313989,248.384564 236.637368,227.809664 L348.955178,114.118742 C353.536507,113.51783 361.821356,114.965098 370.632891,123.885684 L371.234818,124.49506 Z" stroke="#7361C1" stroke-width="4"></path>
+        <polygon fill="#7361C1" transform="translate(330.709766, 188.739779) rotate(44.000000) translate(-330.709766, -188.739779)" points="327.093266 181.254279 336.979266 194.280279 334.326266 196.225279 324.440266 183.198279"></polygon>
+        <polygon fill="#7361C1" points="288.653 220 298.539 233.027 295.886 234.971 286 221.944"></polygon>
+        <polygon fill="#7361C1" transform="translate(305.873941, 167.000000) rotate(-33.000000) translate(-305.873941, -167.000000)" points="302.257441 159.5145 312.143441 172.5405 309.490441 174.4855 299.604441 161.4585"></polygon>
+        <polygon fill="#7361C1" transform="translate(312.635964, 183.782821) rotate(59.000000) translate(-312.635964, -183.782821)" points="315.545964 175.888321 312.972964 192.109321 309.725964 191.678321 312.298964 175.456321"></polygon>
+        <polygon fill="#7361C1" transform="translate(244.635964, 263.782821) rotate(59.000000) translate(-244.635964, -263.782821)" points="247.545964 255.888321 244.972964 272.109321 241.725964 271.678321 244.298964 255.456321"></polygon>
+        <polygon fill="#7361C1" points="236.493 230.383 234.603 243.444 232 243.061 233.889 230"></polygon>
+        <polygon fill="#7361C1" points="252.868 212 260.834 226.309 257.967 227.908 250 213.599"></polygon>
+        <polygon fill="#7361C1" points="340.823 141 342.767 154.145 339.946 154.885 338 141.74"></polygon>
+        <polygon fill="#7361C1" points="231.998 258.183 220.366 270.182 218 267.998 229.633 256"></polygon>
+        <polygon fill="#7361C1" points="314.997 199.185 303.364 211.183 301 208.999 312.632 197"></polygon>
+        <polygon fill="#7361C1" points="286.071 243.146 269.59 246.397 269 243.251 285.481 240"></polygon>
+        <polygon fill="#7361C1" points="354.412 173.13 338 170.156 338.66 167 355.072 169.973"></polygon>
+        <polygon fill="#7361C1" points="290.412 204.131 274 201.157 274.658 198 291.071 200.973"></polygon>
+        <polygon fill="#7361C1" transform="translate(251.647134, 241.918633) rotate(-145.000000) translate(-251.647134, -241.918633)" points="258.232634 247.100633 243.498634 239.588633 245.062634 236.736633 259.795634 244.247633"></polygon>
+        <polygon fill="#7361C1" transform="translate(328.647134, 154.918633) rotate(-145.000000) translate(-328.647134, -154.918633)" points="335.232634 160.100633 320.498634 152.588633 322.062634 149.736633 336.795634 157.247633"></polygon>
+        <polygon fill="#7361C1" transform="translate(274.000000, 219.595335) rotate(-212.000000) translate(-274.000000, -219.595335)" points="265.84 221.695835 280.764 214.558835 282.16 217.494835 267.236 224.631835"></polygon>
+        <polygon fill="#7361C1" transform="translate(289.143109, 180.721187) rotate(65.000000) translate(-289.143109, -180.721187)" points="294.696014 187.221187 281.447966 176.800072 283.590203 174.221187 296.838252 184.641277"></polygon>
+        <path d="M331,132 L363,164" stroke="#7361C1" stroke-width="4"></path>
+        <path d="M103,167 L73,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M123,167 L93,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M143,167 L113,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M163,167 L133,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M183,167 L153,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M203,167 L173,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M223,167 L193,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M243,167 L213,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M263,167 L233,106" stroke="#7361C1" stroke-width="4" stroke-linejoin="round"></path>
+        <path d="M266,166 L266,107 L71,107 L71,166 L266,166 Z" stroke="#7361C1" stroke-width="4"></path>
+        <path d="M167,107 L167,67 L106,67 L106,107 L167,107 Z" stroke="#7361C1" stroke-width="4"></path>
+        <path d="M167,246 L167,166 L106,166 L106,246 L167,246 Z" stroke="#7361C1" stroke-width="4"></path>
+        <path d="M167,285 L167,245 L106,245 L106,285 L167,285 Z" stroke="#7361C1" stroke-width="4"></path>
+      </g>
+    </g>
+  </g>
+</svg>

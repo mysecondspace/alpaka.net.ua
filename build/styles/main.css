@@ -259,9 +259,6 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 .article.main-page .article__advantages { margin: 22.5% 0 30.5%; }
 @media only screen and (max-width: 767px) { .article.main-page .article__advantages { margin: 58.5% 0 55.5%; } }
 .article.main-page .article__advantages .arrow { margin-top: 21%; }
-.article.main-page .article__advantages--icons { margin-top: 10%; }
-.article.main-page .article__advantages--icons + div { margin: 8.5% 0 0 10%; }
-@media only screen and (max-width: 767px) { .article.main-page .article__advantages--icons + div { margin-top: 6.5%; margin-left: 0; width: 100%; } }
 .article.main-page .article__blog { padding: 6% 0 13%; }
 @media only screen and (max-width: 767px) { .article.main-page .article__blog { padding: 6% 0 13%; } }
 .article--gradient { background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA5MDkwOSIvPjxzdG9wIG9mZnNldD0iMjUlIiBzdG9wLWNvbG9yPSIjMDkwOTA5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwOTA5MDkiLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iIzA5MDkwOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ4M2M3YiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background: linear-gradient(to bottom, #090909, #090909, #090909, #090909, #483c7b); }
@@ -278,14 +275,27 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 @media only screen and (max-width: 767px) { .article__advantages { margin-top: 58.2%; display: -ms-grid; display: grid; } }
 .article__advantages .bodycopy { margin-top: 8%; }
 @media only screen and (max-width: 767px) { .article__advantages .bodycopy { margin-top: 5%; } }
-.article__advantages--icons { width: 50%; float: left; display: -ms-flexbox; display: flex; margin-top: 17%; }
-@media only screen and (max-width: 767px) { .article__advantages--icons { margin-top: 8%; display: block; width: 100%; zoom: .8; } }
-.article__advantages--icons > div:first-of-type { display: -ms-grid; display: grid; grid-row-gap: 45px; }
-@media only screen and (max-width: 767px) { .article__advantages--icons > div:first-of-type { -ms-flex-pack: justify; justify-content: space-between; display: -ms-flexbox; display: flex; } }
-.article__advantages--icons > div:last-of-type { margin-left: 21%; }
-@media only screen and (max-width: 767px) { .article__advantages--icons > div:last-of-type { text-align: center; margin-top: 13%; margin-left: 0; zoom: .8; } }
-.article__advantages--icons + div { width: 37%; float: left; margin: 15.5% 0 0 10%; }
-@media only screen and (max-width: 767px) { .article__advantages--icons + div { margin-top: 6.5%; margin-left: 0; width: 100%; } }
+.article__advantages--tabs { display: -ms-flexbox; display: flex; margin-top: 17%; position: relative; --svg-size: 73px; --row-gap: 45px; }
+@media only screen and (max-width: 767px) { .article__advantages--tabs { margin-top: 8%; display: block; } }
+.article__advantages--tabs label { display: inline-block; vertical-align: middle; *vertical-align: auto; *zoom: 1; *display: inline; height: var(--svg-size); width: var(--svg-size); position: absolute; cursor: pointer; }
+@media only screen and (max-width: 767px) { .article__advantages--tabs label { position: initial; width: 24%; zoom: .8; } }
+.article__advantages--tabs section { margin-left: 21%; display: none; float: left; }
+@media only screen and (max-width: 767px) { .article__advantages--tabs section { margin-left: 0; } }
+.article__advantages--tabs section object { float: left; width: 385px; height: 405px; }
+@media only screen and (max-width: 767px) { .article__advantages--tabs section object { margin: 13% auto 0; zoom: .6; } }
+.article__advantages--tabs section object + div { width: 37%; float: right; }
+@media only screen and (max-width: 767px) { .article__advantages--tabs section object + div { margin-top: 6.5%; width: 100%; } }
+.article__advantages--tabs #tab-1:checked ~ #content-1, .article__advantages--tabs #tab-2:checked ~ #content-2, .article__advantages--tabs #tab-3:checked ~ #content-3, .article__advantages--tabs #tab-4:checked ~ #content-4 { position: relative; display: block; left: 0; }
+@media only screen and (max-width: 767px) { .article__advantages--tabs #tab-1:checked ~ #content-1, .article__advantages--tabs #tab-2:checked ~ #content-2, .article__advantages--tabs #tab-3:checked ~ #content-3, .article__advantages--tabs #tab-4:checked ~ #content-4 { display: -ms-grid; display: grid; } }
+.article__advantages--tabs #tab-1, .article__advantages--tabs #tab-2, .article__advantages--tabs #tab-3, .article__advantages--tabs #tab-4 { display: none; }
+.article__advantages--tabs #tab-1:checked + label { background: url(../images/advantages-small-hover-1.svg) 50% no-repeat; }
+.article__advantages--tabs #tab-1 + label { background: url(../images/advantages-small-1.svg) 50% no-repeat; top: 0; }
+.article__advantages--tabs #tab-2:checked + label { background: url(../images/advantages-small-hover-2.svg) 50% no-repeat; }
+.article__advantages--tabs #tab-2 + label { background: url(../images/advantages-small-2.svg) 50% no-repeat; top: calc(var(--row-gap) + var(--svg-size)); }
+.article__advantages--tabs #tab-3:checked + label { background: url(../images/advantages-small-hover-3.svg) 50% no-repeat; }
+.article__advantages--tabs #tab-3 + label { background: url(../images/advantages-small-3.svg) 50% no-repeat; top: calc(var(--row-gap) * 2 + var(--svg-size) * 2); }
+.article__advantages--tabs #tab-4:checked + label { background: url(../images/advantages-small-hover-4.svg) 50% no-repeat; }
+.article__advantages--tabs #tab-4 + label { background: url(../images/advantages-small-4.svg) 50% no-repeat; top: calc(var(--row-gap) * 3 + var(--svg-size) * 3); }
 .article__clients { margin-top: 15.5%; position: relative; }
 @media only screen and (max-width: 767px) { .article__clients { margin-top: 48.5%; } }
 .article__clients--background { width: 100%; height: 100%; background-color: #f9f9fa; position: absolute; z-index: -1; left: 0; top: 8%; }
