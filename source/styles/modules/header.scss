@@ -208,6 +208,10 @@
         margin-top: 70.6%;
       }
 
+      @include media(phone, landscape) {
+        margin-top: 7.6%;
+      }
+
       .heading {
         width: 40%;
 

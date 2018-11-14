@@ -184,12 +184,12 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 .form__block--name:focus-within input, .form__block--name:focus-within textarea, .form__block--phone:focus-within input, .form__block--phone:focus-within textarea, .form__block--message:focus-within input, .form__block--message:focus-within textarea { border-color: #fff; }
 .form__block--name.error::after, .form__block--phone.error::after, .form__block--message.error::after { visibility: visible; }
 .form__block--name.error input, .form__block--name.error textarea, .form__block--phone.error input, .form__block--phone.error textarea, .form__block--message.error input, .form__block--message.error textarea { border-color: #ff5454; }
-.form__block--name::before { content: 'Имя'; }
-.form__block--name::after { content: 'Заполните ваше имя'; }
-.form__block--phone::before { content: 'Телефон'; }
-.form__block--phone::after { content: 'Заполните ваш телефон'; }
-.form__block--message::before { content: 'Сообщение'; }
-.form__block--message::after { content: 'Оставьте нам сообщение'; }
+.form__block--name::before { content: '╨Ш╨╝╤П'; }
+.form__block--name::after { content: '╨Ч╨░╨┐╨╛╨╗╨╜╨╕╤В╨╡ ╨▓╨░╤И╨╡ ╨╕╨╝╤П'; }
+.form__block--phone::before { content: '╨в╨╡╨╗╨╡╤Д╨╛╨╜'; }
+.form__block--phone::after { content: '╨Ч╨░╨┐╨╛╨╗╨╜╨╕╤В╨╡ ╨▓╨░╤И ╤В╨╡╨╗╨╡╤Д╨╛╨╜'; }
+.form__block--message::before { content: '╨б╨╛╨╛╨▒╤Й╨╡╨╜╨╕╨╡'; }
+.form__block--message::after { content: '╨Ю╤Б╤В╨░╨▓╤М╤В╨╡ ╨╜╨░╨╝ ╤Б╨╛╨╛╨▒╤Й╨╡╨╜╨╕╨╡'; }
 .form__block > div { width: 51.5%; }
 @media only screen and (max-width: 767px) { .form__block > div { width: 100%; } }
 .form__block > div p { padding: 13px 29% 0 128px; margin-bottom: 61px; position: relative; line-height: 30px; color: #fff; }
@@ -215,7 +215,7 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 @media only screen and (max-width: 767px) { .form__block form .button { margin-top: 5px; height: 60px; } }
 .form__block form.sent::after, .form__block form.sent::before { z-index: 1; width: 100%; position: absolute; }
 .form__block form.sent::before { content: ''; background: url("../images/sent.svg") 50% 40% no-repeat; background-color: #7361c1; height: 100%; left: 0; top: 0; }
-.form__block form.sent::after { content: 'Заявка успешно отправлена'; text-align: center; font-size: 1.375em; color: #fff; bottom: 35%; }
+.form__block form.sent::after { content: '╨Ч╨░╤П╨▓╨║╨░ ╤Г╤Б╨┐╨╡╤И╨╜╨╛ ╨╛╤В╨┐╤А╨░╨▓╨╗╨╡╨╜╨░'; text-align: center; font-size: 1.375em; color: #fff; bottom: 35%; }
 @media only screen and (max-width: 767px) { .form__block form.sent::after { bottom: 25%; } }
 
 .dd { outline: none; color: #7361c1; cursor: pointer; border: 3px solid; position: relative; letter-spacing: 1px; padding: 28px 17px; line-height: 20px; }
@@ -227,12 +227,13 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 .dd__catalog { max-height: 20px; display: inherit; }
 .dd__catalog .dropdown { max-height: initial; display: inherit; overflow: auto; }
 .dd__catalog .dropdown label { display: none; }
-.dd__catalog.active { max-height: 317px; display: inherit; }
+.dd__catalog.active { max-height: 366.5px; display: inherit; }
 .dd__catalog.active .dropdown { max-height: initial; display: inherit; overflow: auto; }
 .dd__catalog.active .dropdown label { display: block; }
 
 .article.main-page { background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE2MTYxOCIvPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjMTYxNjE4Ii8+PHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiMwOTA5MDkiLz48c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iIzA5MDkwOSIvPjxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjMDkwOTA5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDgzYzdiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'); background: linear-gradient(to bottom, #161618, #161618, #090909, #090909, #090909, #483c7b); padding-top: 8.5%; }
 @media only screen and (max-width: 767px) { .article.main-page { padding-top: 43.5%; } }
+@media only screen and (max-width: 767px) and (orientation: landscape) { .article.main-page { padding-top: 8.5%; } }
 .article.main-page .h3 { color: #b6b6b6; }
 .article.main-page .article__catalog { background-color: transparent; padding: 10.5% 0 22.5%; -ms-flex-align: center; align-items: center; display: -ms-flexbox; display: flex; }
 @media only screen and (max-width: 767px) { .article.main-page .article__catalog { display: inline-block; vertical-align: middle; *vertical-align: auto; *zoom: 1; *display: inline; padding: 15.5% 0 57.5%; } }
@@ -362,6 +363,7 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 .article__blog .container { position: relative; }
 @media only screen and (max-width: 767px) { .article__blog .container { position: initial; } }
 @media only screen and (max-width: 767px) { .article__blog .swiper-container { padding-top: 32.5%; } }
+@media only screen and (max-width: 767px) and (orientation: landscape) { .article__blog .swiper-container { padding-top: 16.5%; } }
 .article__blog .swiper-container .swiper-button-prev, .article__blog .swiper-container .swiper-button-next { background: url("../images/arrow-second.svg") 50% 50% no-repeat; border: 2px solid #fff; padding: 16px 24px; outline: none; top: inherit; height: 16px; width: 31px; bottom: 0; }
 @media only screen and (max-width: 767px) { .article__blog .swiper-container .swiper-button-prev, .article__blog .swiper-container .swiper-button-next { padding: 16px 35px; bottom: inherit; top: 46px; } }
 .article__blog .swiper-container .swiper-button-prev { transform: rotate(180deg); left: 181px; }
@@ -463,6 +465,7 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 @media only screen and (max-width: 767px) { .article__portfolio .swiper-container .swiper-button-next { padding-left: 35px; left: 103px; } }
 .article__portfolio--hood { position: absolute; width: 100%; left: 0; top: 0; }
 @media only screen and (max-width: 767px) { .article__portfolio--hood { padding-top: 4%; } }
+@media only screen and (max-width: 767px) and (orientation: landscape) { .article__portfolio--hood { padding-top: 10%; } }
 @media only screen and (min-width: 1024px) { .article__portfolio--hood { padding-top: 1.5%; } }
 @media only screen and (min-width: 1440px) { .article__portfolio--hood { padding-top: 4%; } }
 .article__portfolio--hood span { width: 21%; float: left; margin-top: .7%; line-height: 22px; font-size: 1.25em; color: #979797; }
@@ -497,8 +500,8 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 @media only screen and (max-width: 767px) { .article__catalog--tabs label:first-of-type { display: none; } }
 .article__catalog--tabs label:last-of-type { margin-bottom: 0; }
 .article__catalog--tabs label:hover { color: #fff; }
-.article__catalog--tabs section { left: 0; width: 76%; float: left; display: none; margin-left: 24%; -ms-flex-align: center; align-items: center; position: relative; }
-@media only screen and (max-width: 767px) { .article__catalog--tabs section { margin-top: calc(18% + 31px); margin-left: 0; width: auto; } }
+.article__catalog--tabs section { width: 76%; display: none; margin-left: 24%; position: relative; }
+@media only screen and (max-width: 767px) { .article__catalog--tabs section { margin-top: calc(10% + 31px); margin-left: 0; width: auto; } }
 @media only screen and (max-width: 767px) { .article__catalog--tabs section:last-of-type { margin-bottom: 0; } }
 .article__catalog--tabs section img { float: left; width: 42.4%; height: 363px; margin-right: 8%; -o-object-fit: cover; object-fit: cover; -o-object-position: 64%; object-position: 64%; }
 @media only screen and (max-width: 767px) { .article__catalog--tabs section img { margin-right: 0; height: 310px; width: 100%; } }
@@ -621,6 +624,7 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 .header__hood--buttons [href*='tel']:hover { color: #7361c1; }
 .header__cellar.main-page { margin-top: 7.6%; }
 @media only screen and (max-width: 767px) { .header__cellar.main-page { margin-top: 70.6%; } }
+@media only screen and (max-width: 767px) and (orientation: landscape) { .header__cellar.main-page { margin-top: 7.6%; } }
 .header__cellar.main-page .heading { width: 40%; }
 @media only screen and (max-width: 767px) { .header__cellar.main-page .heading { width: 100%; } }
 .header__cellar.main-page .bodycopy { width: 30%; margin-top: 4%; }
