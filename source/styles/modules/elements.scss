@@ -691,36 +691,67 @@
   padding: 28px 17px;
   line-height: 20px;
 
-    &::after {
-      @include transition($time);
-      background: url('/../images/dropdown.svg') no-repeat;
-      position: absolute;
-      height: 14px;
-      content: '';
-      right: 20px;
-      width: 21px;
-      top: 33px;
+  &::after {
+    @include transition($time);
+    background: url('/../images/dropdown.svg') no-repeat;
+    position: absolute;
+    height: 14px;
+    content: '';
+    right: 20px;
+    width: 21px;
+    top: 33px;
+  }
+
+  .dropdown {
+    display: none;
+    max-height: 0;
+    z-index: 10000;
+    list-style: none;
+    overflow: hidden;
+
+    a {
+      color: $white;
+    }
+  }
+
+  &.active {
+    &:after {
+      transform: rotate(180deg);
     }
 
     .dropdown {
-      display: none;
-      max-height: 0;
-      z-index: 10000;
-      list-style: none;
-      overflow: hidden;
-      background-color: $dark;
+      display: block;
+      min-height: fit-content;
+    }
+  }
 
-      a {
-        color: $white;
+  &__catalog {
+    max-height: 20px;
+    display: inherit;
+
+    .dropdown {
+      max-height: initial;
+      display: inherit;
+      overflow: auto;
+
+      label {
+        display: none;
       }
     }
+
     &.active {
-      &:after {
-        transform: rotate(180deg);
-      }
+      max-height: 317px;
+      display: inherit;
+
       .dropdown {
-        display: block;
-        min-height: fit-content;
+        max-height: initial;
+        display: inherit;
+        overflow: auto;
+
+        label {
+          display: block;
+        }
       }
     }
+  }
 }

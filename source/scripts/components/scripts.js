@@ -33,8 +33,9 @@ if (screen.width < 768) {
   });
 
   $(".article__publications--list, .article__catalog--list").wrap($("<div id='dd' class='dd'/>")).addClass("dropdown");
+  $(".article__catalog--tabs").wrap($("<div id='dd' class='dd dd__catalog'/>")).addClass("dropdown");
   $("<p>Все статьи</p>").insertBefore($(".article__publications--list"));
-  $("<p>Все упаковки</p>").insertBefore($(".article__catalog--list"));
+  $("<p>Все упаковки</p>").insertBefore($(".article__catalog--list, .article__catalog--tabs"));
 
   // mobile main menu
   var opened = false;

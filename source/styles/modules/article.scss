@@ -21,51 +21,8 @@
       display: flex;
 
       @include media(phone) {
+        @include inline-block;
         padding: 15.5% 0 57.5%;
-        display: grid;
-      }
-
-      > div {
-        width: 76%;
-        float: left;
-        display: flex;
-        align-items: center;
-
-        @include media(phone) {
-          margin-bottom: 18%;
-          display: grid;
-          width: auto;
-        }
-
-        &:last-of-type {
-          @include media(phone) {
-            margin-bottom: 0;
-          }
-        }
-
-        img {
-          float: left;
-          width: 42.4%;
-          height: 363px;
-          margin-right: 8%;
-          object-fit: cover;
-
-          @include media(phone) {
-            margin-right: 0;
-            height: 310px;
-            width: 100%;
-          }
-        }
-
-        > div {
-          float: left;
-          width: 49.6%;
-
-          @include media(phone) {
-            margin-top: 17%;
-            width: 100%;
-          }
-        }
       }
 
       .bodycopy {
@@ -81,27 +38,6 @@
 
         @include media(phone) {
           margin-top: 18%;
-        }
-      }
-
-      &--list {
-        height: fit-content;
-        float: left;
-        width: 26%;
-
-        @include media(phone) {
-          background-color: transparent;
-          width: 100%;
-        }
-
-        li {
-          margin-bottom: 22px;
-          line-height: 20px;
-
-          @include media(phone) {
-            margin-top: 25.5px;
-            margin-bottom: 0;
-        }
         }
       }
     }
@@ -322,10 +258,10 @@
         }
       }
 
-      #tab-1:checked ~ #content-1,
-      #tab-2:checked ~ #content-2,
-      #tab-3:checked ~ #content-3,
-      #tab-4:checked ~ #content-4 {
+      #tab-advantages-1:checked ~ #content-advantages-1,
+      #tab-advantages-2:checked ~ #content-advantages-2,
+      #tab-advantages-3:checked ~ #content-advantages-3,
+      #tab-advantages-4:checked ~ #content-advantages-4 {
         position: relative;
         display: block;
         left: 0;
@@ -335,14 +271,14 @@
         }
       }
 
-      #tab-1,
-      #tab-2,
-      #tab-3,
-      #tab-4 {
+      #tab-advantages-1,
+      #tab-advantages-2,
+      #tab-advantages-3,
+      #tab-advantages-4 {
         display: none;
       }
 
-      #tab-1 {
+      #tab-advantages-1 {
         &:checked + label {
           background: url(/../images/advantages-small-hover-1.svg) 50% no-repeat;
         }
@@ -353,7 +289,7 @@
         }
       }
 
-      #tab-2 {
+      #tab-advantages-2 {
         &:checked + label {
           background: url(/../images/advantages-small-hover-2.svg) 50% no-repeat;
         }
@@ -364,7 +300,7 @@
         }
       }
 
-      #tab-3 {
+      #tab-advantages-3 {
         &:checked + label {
           background: url(/../images/advantages-small-hover-3.svg) 50% no-repeat;
         }
@@ -375,7 +311,7 @@
         }
       }
 
-      #tab-4 {
+      #tab-advantages-4 {
         &:checked + label {
           background: url(/../images/advantages-small-hover-4.svg) 50% no-repeat;
         }
@@ -1517,6 +1453,182 @@
             margin-left: 30px;
           }
         }
+      }
+    }
+
+    &--tabs {
+      --svg-size: 24px;
+      --row-gap: 24.5px;
+      position: relative;
+
+      @include media(phone) {
+        display: block;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      label {
+        @include inline-block;
+        @include transition($time);
+        text-overflow: ellipsis;
+        margin-bottom: 24.5px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        position: absolute;
+        line-height: 24px;
+        overflow: hidden;
+        cursor: pointer;
+        color: $gray;
+        width: 22%;
+
+        @include media(phone) {
+          @include transition(0s);
+          white-space: initial;
+          margin-top: 25.5px;
+          position: initial;
+          margin-bottom: 0;
+          overflow: auto;
+          color: $white;
+          width: 100%;
+        }
+
+        &:first-of-type {
+          @include media(phone) {
+            display: none;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      section {
+        left: 0;
+        width: 76%;
+        float: left;
+        display: none;
+        margin-left: 24%;
+        align-items: center;
+        position: relative;
+
+        @include media(phone) {
+          margin-top: calc(18% + 31px);
+          margin-left: 0;
+          width: auto;
+        }
+
+        &:last-of-type {
+          @include media(phone) {
+            margin-bottom: 0;
+          }
+        }
+
+        img {
+          float: left;
+          width: 42.4%;
+          height: 363px;
+          margin-right: 8%;
+          object-fit: cover;
+          object-position: 64%;
+
+          @include media(phone) {
+            margin-right: 0;
+            height: 310px;
+            width: 100%;
+          }
+        }
+
+        > div {
+          float: left;
+          width: 49.6%;
+
+          @include media(phone) {
+            margin-top: 17%;
+            width: 100%;
+          }
+        }
+      }
+
+      #tab-catalog-1:checked ~ #content-catalog-1,
+      #tab-catalog-2:checked ~ #content-catalog-2,
+      #tab-catalog-3:checked ~ #content-catalog-3,
+      #tab-catalog-4:checked ~ #content-catalog-4,
+      #tab-catalog-5:checked ~ #content-catalog-5,
+      #tab-catalog-6:checked ~ #content-catalog-6,
+      #tab-catalog-7:checked ~ #content-catalog-7 {
+        display: block;
+
+        @include media(phone) {
+          display: grid;
+        }
+      }
+
+      #tab-catalog-1,
+      #tab-catalog-2,
+      #tab-catalog-3,
+      #tab-catalog-4,
+      #tab-catalog-5,
+      #tab-catalog-6,
+      #tab-catalog-7 {
+        display: none;
+
+        &:checked + label {
+          width: calc(22% - 30px);
+          padding-left: 30px;
+          cursor: default;
+          color: $purple;
+
+          @include media(phone) {
+            width: calc(100% - 30px);
+            position: relative;
+            top: 0;
+          }
+
+          &::before {
+            content: '';
+            animation: fade-in $time * 5 forwards;
+            background: $purple;
+            position: absolute;
+            height: 10px;
+            width: 13px;
+            opacity: 0;
+            top: 7px;
+            left: 0;
+          }
+        }
+      }
+
+      #tab-catalog-1 + label {
+        top: 0;
+      }
+
+      #tab-catalog-2 + label {
+        top: calc(var(--row-gap) + var(--svg-size));
+      }
+
+      #tab-catalog-3 + label {
+        top: calc(var(--row-gap) * 2 + var(--svg-size) * 2);
+      }
+
+      #tab-catalog-4 + label {
+        top: calc(var(--row-gap) * 3 + var(--svg-size) * 3);
+      }
+
+      #tab-catalog-5 + label {
+        top: calc(var(--row-gap) * 4 + var(--svg-size) * 4);
+      }
+
+      #tab-catalog-6 + label {
+        top: calc(var(--row-gap) * 5 + var(--svg-size) * 5);
+      }
+
+      #tab-catalog-7 + label {
+        top: calc(var(--row-gap) * 6 + var(--svg-size) * 6);
       }
     }
 
