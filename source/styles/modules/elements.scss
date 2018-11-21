@@ -2,6 +2,7 @@
   color: $white;
   font-size: em(72);
   line-height: 77px;
+  font-family: $bold;
   font-weight: normal;
   letter-spacing: 2.25px;
 
@@ -16,6 +17,7 @@
   color: $white;
   font-size: em(36);
   line-height: 77px;
+  font-family: $bold;
   font-weight: normal;
 
   &--dark {
@@ -63,7 +65,7 @@
   color: $white;
   font-size: em(30);
   line-height: 52px;
-  font-family: $light;
+  font-family: $bold;
   font-weight: normal;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -150,6 +152,7 @@
 .arrow {
   @include inline-block;
   letter-spacing: 2px;
+  font-family: $bold;
   position: relative;
   font-size: em(14);
   color: $purple;
@@ -191,6 +194,7 @@
   @include inline-block;
   @include transition($time);
   letter-spacing: 2px;
+  font-family: $bold;
   font-size: em(16);
   cursor: pointer;
 

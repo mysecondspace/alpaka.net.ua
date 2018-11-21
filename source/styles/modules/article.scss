@@ -1,4 +1,5 @@
 .article {
+  margin-bottom: -1px;
 
   // all blocks on the main page
   &.main-page {
@@ -115,6 +116,54 @@
       .arrow {
         margin-top: 21%;
       }
+
+      &--tabs {
+        margin-top: 9%;
+
+        #tab-advantages-1 {
+          &:checked + label {
+            background: url(/../images/advantages-small-white-1.svg) 50% no-repeat;
+          }
+
+          + label {
+            background: url(/../images/advantages-small-gray-1.svg) 50% no-repeat;
+            top: 0;
+          }
+        }
+
+        #tab-advantages-2 {
+          &:checked + label {
+            background: url(/../images/advantages-small-white-2.svg) 50% no-repeat;
+          }
+
+          + label {
+            background: url(/../images/advantages-small-gray-2.svg) 50% no-repeat;
+            top: calc(var(--row-gap) + var(--svg-size));
+          }
+        }
+
+        #tab-advantages-3 {
+          &:checked + label {
+            background: url(/../images/advantages-small-white-3.svg) 50% no-repeat;
+          }
+
+          + label {
+            background: url(/../images/advantages-small-gray-3.svg) 50% no-repeat;
+            top: calc(var(--row-gap) * 2 + var(--svg-size) * 2);
+          }
+        }
+
+        #tab-advantages-4 {
+          &:checked + label {
+            background: url(/../images/advantages-small-white-4.svg) 50% no-repeat;
+          }
+
+          + label {
+            background: url(/../images/advantages-small-gray-4.svg) 50% no-repeat;
+            top: calc(var(--row-gap) * 3 + var(--svg-size) * 3);
+          }
+        }
+      }
     }
 
     // block with swiper touch slider on the blog page
@@ -165,6 +214,7 @@
       span {
         color: $purple;
         font-size: em(60);
+        font-family: $bold;
 
         @include media(phone) {
           font-size: em(45);
@@ -549,6 +599,8 @@
       }
 
       li {
+        font-family: $bold;
+        
         &:first-of-type {
           margin-bottom: 46px;
         }
@@ -564,6 +616,7 @@
         span {
           color: $white;
           font-size: em(14);
+          font-family: $bold;
           letter-spacing: 2px;
         }
 
@@ -621,6 +674,7 @@
 
       .swiper-button-prev,
       .swiper-button-next {
+        @include transition($time);
         background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
         border: 2px solid $white;
         padding: 16px 24px;
@@ -633,6 +687,11 @@
           padding: 16px 35px;
           bottom: inherit;
           top: 46px;
+        }
+
+        &:hover {
+          background: url('/../images/arrow-dark.svg') 50% 50% no-repeat;
+          background-color: $white;
         }
       }
 
@@ -741,6 +800,7 @@
 
       .swiper-button-prev,
       .swiper-button-next {
+        @include transition($time);
         background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
         border: 2px solid $white;
         padding: 16px 24px;
@@ -754,6 +814,11 @@
           padding: 16px 35px;
           bottom: inherit;
           top: 46px;
+        }
+
+        &:hover {
+          background: url('/../images/arrow-dark.svg') 50% 50% no-repeat;
+          background-color: $white;
         }
       }
 
@@ -1233,6 +1298,7 @@
             color: $dark;
             font-size: em(24);
             line-height: 52px;
+            font-family: $bold;
             letter-spacing: 3px;
             text-transform: uppercase;
           }
@@ -1321,6 +1387,7 @@
       letter-spacing: 8px;
       font-weight: normal;
       margin-left: 25.5%;
+      font-family: $bold;
       line-height: 72px;
       font-size: em(64);
       color: $white;
@@ -1340,9 +1407,10 @@
 
     &--button {
       background: url('/../images/plus.svg') no-repeat;
+      letter-spacing: 2px;
       position: absolute;
       text-align: center;
-      letter-spacing: 2px;
+      font-family: $bold;
       padding-top: 83px;
       font-size: em(14);
       cursor: pointer;
@@ -1540,11 +1608,10 @@
 
         img {
           float: left;
-          width: 42.4%;
-          height: 363px;
+          width: 362px;
+          height: 362px;
           margin-right: 8%;
           object-fit: cover;
-          object-position: 64%;
 
           @include media(phone) {
             margin-right: 0;
@@ -1926,6 +1993,7 @@
         p {
           @include transition($time);
           letter-spacing: 1.5px;
+          font-family: $bold;
           line-height: 40px;
           font-size: em(24);
           margin-top: 4%;

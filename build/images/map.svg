@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="107px" height="121px" viewBox="0 0 107 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6-Контакты" transform="translate(-761.000000, -945.000000)">
+            <g id="Group" transform="translate(761.000000, 945.000000)">
+                <path d="M70.2941176,107 L53,121 L35.7058824,107 L0,107 L0,0 L107,0 L107,107 L70.2941176,107 Z" id="Combined-Shape" fill="#7361C1"></path>
+                <g id="Page-1" transform="translate(32.000000, 34.000000)" fill="#FFFFFF">
+                    <polygon id="Fill-1" points="0 5.57333333 0 16.72 16.2794338 16.72 16.2794338 14.1048854 27.7217457 14.1048854 27.7217457 16.72 44 16.72 44 5.57333333"></polygon>
+                    <polygon id="Fill-2" points="27.9659018 19.5066667 27.9659018 22.50005 16.0329187 22.50005 16.0329187 19.5066667 0 19.5066667 0 34.4958486 44 34.4958486 44 19.5066667"></polygon>
+                    <polygon id="Fill-3" points="11.3548387 2.78666667 32.6451613 2.78666667 32.6451613 0 11.3548387 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
