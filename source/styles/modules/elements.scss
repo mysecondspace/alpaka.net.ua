@@ -399,6 +399,156 @@
   }
 }
 
+.project {
+  background-color: $project;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+
+    @include media(phone) {
+      margin-top: 19.5%;
+      height: 358px;
+    }
+  }
+
+  .container {
+    animation: fade-in-up-reverse $time * 2;
+    background-color: lighten($dark, 5%);
+    align-items: center;
+    position: relative;
+    display: flex;
+    opacity: 0;
+
+    @include media(phone) {
+      margin: 5% auto;
+      display: block;
+    }
+
+    @include media(laptop) {
+      margin: 2% auto;
+    }
+
+    @include media(large) {
+      margin: 10% auto;
+    }
+  }
+
+  .subheading {
+    @include media(phone) {
+      font-size: em(24);
+    }
+  }
+
+  .bodycopy {
+    margin-top: 4%;
+  }
+
+  .form {
+    width: 50%;
+    padding: 75px;
+    background: transparent;
+
+    @include media(phone) {
+      width: calc(100% - 50px);
+      padding: 25px;
+    }
+
+    &__block {
+      margin: 0;
+
+      form {
+        width: 100%;
+
+        @include media(phone) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__content {
+    width: 50%;
+    padding-left: 75px;
+
+    @include media(phone) {
+      width: calc(100% - 50px);
+      padding: 25px;
+    }
+  }
+
+  &__close {
+    background: url('/../images/close.svg') no-repeat;
+    position: absolute;
+    cursor: pointer;
+    height: 28px;
+    width: 29px;
+    right: 25px;
+    top: 25px;
+
+    @include media(phone) {
+      right: 15px;
+      top: 15px;
+      zoom: .8;
+    }
+  }
+
+  &.opened > div {
+    animation: fade-in-up $time * 2 $time / 2;
+    animation-fill-mode: forwards;
+  }
+
+  &--cellar {
+    position: relative;
+    background-color: $white;
+    margin: 0 auto;
+    height: 119px;
+    width: 83%;
+    z-index: 1;
+
+
+    @include media(phone) {
+      background-color: transparent;
+      height: 72px;
+      width: 100%;
+    }
+
+    &::before,
+    &::after {
+      background: url('/../images/arrow.svg') no-repeat;
+      position: absolute;
+      outline: none;
+      height: 16px;
+      width: 70px;
+      content: '';
+      top: 50%;
+
+      @include media(phone) {
+        display: none;
+      }
+    }
+
+    &::before {
+      transform: rotate(180deg);
+      left: 10%;
+    }
+
+    &::after {
+      right: 10%;
+    }
+  }
+}
+
 .form {
   @include background(linear-gradient(top, $dark, $dark, $purple-dark));
   padding: 8.5% 0 12%;

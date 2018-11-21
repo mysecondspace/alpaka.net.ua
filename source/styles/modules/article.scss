@@ -1314,25 +1314,6 @@
           width: 50%;
         }
       }
-
-      a {
-        background: url('/../images/plus.svg') no-repeat;
-        position: absolute;
-        text-align: center;
-        letter-spacing: 2px;
-        padding-top: 83px;
-        font-size: em(14);
-        color: $purple;
-        height: 68px;
-        width: 68px;
-        right: 0;
-        top: 4%;
-
-        @include media(phone) {
-          top: 115px;
-          zoom: .7;
-        }
-      }
     }
 
     &--title {
@@ -1354,6 +1335,26 @@
         float: left;
         width: 60%;
         margin: 0;
+      }
+    }
+
+    &--button {
+      background: url('/../images/plus.svg') no-repeat;
+      position: absolute;
+      text-align: center;
+      letter-spacing: 2px;
+      padding-top: 83px;
+      font-size: em(14);
+      cursor: pointer;
+      color: $purple;
+      height: 68px;
+      width: 68px;
+      right: 0;
+      top: 4%;
+
+      @include media(phone) {
+        top: 115px;
+        zoom: .7;
       }
     }
 
@@ -1986,6 +1987,7 @@
     &--pagination {
       text-align: center;
       position: relative;
+      color: $white;
 
       @include media(phone) {
         justify-content: space-between;
@@ -1995,18 +1997,18 @@
       }
 
       a {
-        &:last-of-type,
-        &:first-of-type {
-          content: '';
+        &:last-of-type::before,
+        &:first-of-type::before {
           background: url('/../images/arrow.svg') no-repeat;
           position: absolute;
           outline: none;
           height: 16px;
           width: 70px;
-          bottom: 0;
+          bottom: 3px;
+          content: '';
         }
 
-        &:first-of-type {
+        &:first-of-type::before {
           transform: rotate(180deg);
           left: 28%;
 
@@ -2015,7 +2017,7 @@
           }
         }
 
-        &:last-of-type {
+        &:last-of-type::before {
           right: 28%;
 
           @include media(phone) {
@@ -2027,7 +2029,6 @@
         &:not(:first-of-type) {
           @include transition($time);
           letter-spacing: 1px;
-          line-height: 24px;
           cursor: pointer;
           margin: 0 6px;
           color: $white;

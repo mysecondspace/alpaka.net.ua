@@ -92,6 +92,24 @@ function modalClose() {
   $(".modal").delay(250).fadeOut(250);
 }
 
+// project window
+$(document).mouseup(function(e) {
+  if ($(".project").has(e.target).length === 0)
+    projectClose();
+});
+
+function projectOpen() {
+  $("body").css("overflow", "hidden");
+  $(".project").addClass("opened");
+  $(".project").fadeIn(250);
+}
+
+function projectClose() {
+  $("body").css("overflow", "auto");
+  $(".project").removeClass("opened");
+  $(".project").delay(250).fadeOut(250);
+}
+
 // changing logotype color
 if ($(".dark-elements").length) {
   var logo = $(".header__hood--logo object");

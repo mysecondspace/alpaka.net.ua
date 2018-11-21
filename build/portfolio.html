@@ -88,7 +88,7 @@
                   <div class="container">
                     <span>Упаковка для продуктов питания</span>
                     <h2 class="article__portfolio--title">O'su Yogurt</h2>
-                    <a href="#">Больше</a>
+                    <div class="article__portfolio--button" onclick="projectOpen()">Больше</div>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@
                   <div class="container">
                     <span>Упаковка для продуктов питания</span>
                     <h2 class="article__portfolio--title">O'su Yogurt</h2>
-                    <a href="#">Больше</a>
+                    <div class="article__portfolio--button" onclick="projectOpen()">Больше</div>
                   </div>
                 </div>
               </div>
@@ -236,7 +236,40 @@
             </div>
           </div>
         </div>
-      </article>
+
+        <!-- project -->
+        <div class="project">
+          <div class="container">
+        
+            <!-- close -->
+            <div class="project__close" onclick="projectClose()"></div>
+        
+             <!-- swiper touch slider -->
+              <div id="blog" class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+                  </div>
+                </div>
+                <div class="container">
+        
+                  <!-- cellar -->
+                  <div class="project--cellar">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev">
+                      <span>O'su Yogurt</span>
+                      <span>Упаковка для продуктов питания</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article></div>
+      
 
       <!-- footer -->
       <!-- modal window -->
@@ -364,7 +397,7 @@
           </div>
         </div>
       </footer>
-    </div>
+    
 
     <!-- script -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpTfzEfoNeVlnJhNyZCHOlMSEl5BrFyUQ"></script>
