@@ -74,6 +74,7 @@
 
         &::after {
           background: url('/../images/arrow-third.svg');
+          background-position: right;
         }
       }
 
@@ -600,7 +601,7 @@
 
       li {
         font-family: $bold;
-        
+
         &:first-of-type {
           margin-bottom: 46px;
         }
@@ -1043,15 +1044,15 @@
           margin-bottom: 0;
         }
 
-        &[href*='facebook'] {
+        &.facebook {
           @include sprite(facebook, social);
         }
 
-        &[href*='twitter'] {
+        &.twitter {
           @include sprite(twitter, social);
         }
 
-        &[href*='pinterest'] {
+        &.pinterest {
           @include sprite(pinterest, social);
         }
       }
@@ -2068,6 +2069,7 @@
         &:last-of-type::before,
         &:first-of-type::before {
           background: url('/../images/arrow.svg') no-repeat;
+          background-position: right;
           position: absolute;
           outline: none;
           height: 16px;

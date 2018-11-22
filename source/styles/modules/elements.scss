@@ -150,6 +150,7 @@
 
 %arrow,
 .arrow {
+  @include transition($time);
   @include inline-block;
   letter-spacing: 2px;
   font-family: $bold;
@@ -158,13 +159,15 @@
   color: $purple;
 
   &::after {
-    content: '';
+    @include transition($time);
     background: url('/../images/arrow.svg');
+    background-position: right;
     top: calc(50% - 7px);
     position: absolute;
     margin-left: 25px;
     height: 16px;
     width: 70px;
+    content: '';
 
     @include media(phone) {
       margin-left: 31px;
@@ -173,6 +176,10 @@
 
   &:hover {
     color: $purple-light;
+
+    &::after {
+      width: 100px;
+    }
   }
 
   &:active {
@@ -236,6 +243,10 @@
     &:hover {
       background-color: $purple-light;
       border-color: $purple-light;
+
+      .arrow::after {
+        width: 100px;
+      }
     }
 
     &:active {

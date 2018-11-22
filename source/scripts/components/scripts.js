@@ -140,52 +140,55 @@ var clients = new Swiper("#clients", {
 });
 
 // swiper touch slider on the services and portfolio pages
-var swiper = new Swiper('#swiper', {
-  simulateTouch: false,
-  speed: 1000,
-  loop: true,
-  pagination: {
-    type: 'fraction',
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false
-  }
+var swiper = new Swiper("#swiper", {
+    simulateTouch: false,
+    autoHeight: true,
+    speed: 1000,
+    loop: true,
+    pagination: {
+      type: "fraction",
+      el: ".swiper-pagination"
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    }
 });
 
 // swiper touch slider on the blog page
-var blog = new Swiper('#blog', {
-  simulateTouch: false,
-  speed: 1000,
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false
-  }
+var blog = new Swiper("#blog", {
+    simulateTouch: false,
+    speed: 1000,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    }
 });
 
 // swiper touch slider on the post page
-var post = new Swiper('#post', {
-  simulateTouch: false,
-  speed: 1000,
-  loop: true,
-  pagination: {
-    type: 'fraction',
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+$(".swiper-container").each(function (index) {
+    var post = new Swiper($(this)[0], {
+        simulateTouch: false,
+        speed: 1000,
+        loop: true,
+        pagination: {
+          type: "fraction",
+          el: ".swiper-pagination"
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+    });
 });
 
 // map
