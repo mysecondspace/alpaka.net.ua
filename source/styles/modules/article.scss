@@ -521,7 +521,10 @@
             text-align: center;
 
             img {
-              zoom: .45;
+              height: min-content;
+              object-fit: contain;
+              max-height: 95px;
+              width: 150px;
             }
           }
         }
@@ -529,6 +532,7 @@
         .swiper-button-prev,
         .swiper-button-next {
           background: url('/../images/arrow.svg') no-repeat;
+          background-position: right;
           margin-top: -63px;
           outline: none;
           height: 16px;
@@ -1444,6 +1448,7 @@
       &::before,
       &::after {
         background: url('/../images/arrow.svg') no-repeat;
+        background-position: right;
         position: absolute;
         outline: none;
         height: 16px;
@@ -1516,7 +1521,6 @@
         }
 
         &.selected {
-          color: $purple;
           position: relative;
 
           &::before {
@@ -1529,7 +1533,8 @@
             left: 0;
           }
 
-          a {
+          a,
+          span {
             color: $purple;
             cursor: default;
             margin-left: 30px;
@@ -1874,27 +1879,9 @@
 
         &:first-of-type {
           width: 29%;
-          color: $purple;
-          position: relative;
 
           @include media(phone) {
             display: none;
-          }
-
-          &::before {
-            content: '';
-            background: $purple;
-            position: absolute;
-            height: 10px;
-            width: 13px;
-            top: 7px;
-            left: 0;
-          }
-
-          a {
-            color: $purple;
-            cursor: default;
-            margin-left: 30px;
           }
         }
 
@@ -1908,6 +1895,27 @@
 
           &:hover {
             color: $white;
+          }
+        }
+
+        &.selected {
+          position: relative;
+
+          &::before {
+            content: '';
+            background: $purple;
+            position: absolute;
+            height: 10px;
+            width: 13px;
+            top: 7px;
+            left: 0;
+          }
+
+          a,
+          span {
+            color: $purple;
+            cursor: default;
+            margin-left: 30px;
           }
         }
       }

@@ -59,6 +59,59 @@
               <div class="button button--clear" onclick="modalOpen()">Заказать</div>
             </div>
           </div>
+          
+          <!-- modal window -->
+          <div class="modal">
+            <div class="container">
+          
+              <!-- close -->
+              <div class="modal__close" onclick="modalClose()"></div>
+          
+              <!-- content -->
+              <div class="modal__content">
+          
+                <!-- subheading -->
+                <p class="subheading">Заказать упаковку</p>
+          
+                <!-- second bodycopy -->
+                <p class="bodycopy bodycopy__second">Оставьте заявку и мы поможем Вам подобрать и создать уникальную упаковку для Вашего бренда</p>
+              </div>
+          
+              <!-- form -->
+              <div class="form">
+          
+                <!-- block -->
+                <div class="form__block">
+          
+                  <!-- add 'sent' class to to the lower form, when the form is sent -->
+                  <form action="#" method="post">
+          
+                    <!-- input name -->
+                    <!-- add 'error' class to to the lower div, when the input is empty -->
+                    <div class="form__block--name">
+                      <input type="text" name="name" value="Имя" onblur='if (this.value == "")
+                      this.value = "Имя"' onfocus='if (this.value == "Имя") this.value = ""' required>
+                    </div>
+          
+                    <!-- input phone -->
+                    <!-- add 'error' class to to the lower div, when the input is empty -->
+                    <div class="form__block--phone">
+                      <input type="text" name="phone" placeholder="Телефон" required>
+                    </div>
+          
+                    <!-- input message -->
+                    <!-- add 'error' class to to the lower div, when the input is empty -->
+                    <div class="form__block--message">
+                      <textarea name="message" rows="1" onblur='if (this.value == "") { this.value = "Сообщение" }' onfocus='if (this.value == "Сообщение") { this.value = "" }' required>Сообщение</textarea>
+                    </div>
+          
+                    <!-- button fill -->
+                    <button class="button button--fill" type="submit" value="submit">Отправить заявку</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
 
         <!-- panel with bottom elements on the services page -->
@@ -304,59 +357,6 @@
       </article>
 
       <!-- footer -->
-      <!-- modal window -->
-      <div class="modal">
-        <div class="container">
-      
-          <!-- close -->
-          <div class="modal__close" onclick="modalClose()"></div>
-      
-          <!-- content -->
-          <div class="modal__content">
-      
-            <!-- subheading -->
-            <p class="subheading">Заказать упаковку</p>
-      
-            <!-- second bodycopy -->
-            <p class="bodycopy bodycopy__second">Оставьте заявку и мы поможем Вам подобрать и создать уникальную упаковку для Вашего бренда</p>
-          </div>
-      
-          <!-- form -->
-          <div class="form">
-      
-            <!-- block -->
-            <div class="form__block">
-      
-              <!-- add 'sent' class to to the lower form, when the form is sent -->
-              <form action="#" method="post">
-      
-                <!-- input name -->
-                <!-- add 'error' class to to the lower div, when the input is empty -->
-                <div class="form__block--name">
-                  <input type="text" name="name" value="Имя" onblur='if (this.value == "")
-                  this.value = "Имя"' onfocus='if (this.value == "Имя") this.value = ""' required>
-                </div>
-      
-                <!-- input phone -->
-                <!-- add 'error' class to to the lower div, when the input is empty -->
-                <div class="form__block--phone">
-                  <input type="text" name="phone" placeholder="Телефон" required>
-                </div>
-      
-                <!-- input message -->
-                <!-- add 'error' class to to the lower div, when the input is empty -->
-                <div class="form__block--message">
-                  <textarea name="message" rows="1" onblur='if (this.value == "") { this.value = "Сообщение" }' onfocus='if (this.value == "Сообщение") { this.value = "" }' required>Сообщение</textarea>
-                </div>
-      
-                <!-- button fill -->
-                <button class="button button--fill" type="submit" value="submit">Отправить заявку</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      
       <footer id="footer" class="footer">
         <div class="container">
       
@@ -432,7 +432,6 @@
     </div>
 
     <!-- script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpTfzEfoNeVlnJhNyZCHOlMSEl5BrFyUQ"></script>
     <script src="scripts/main.min.js"></script>
   </body>
 </html>

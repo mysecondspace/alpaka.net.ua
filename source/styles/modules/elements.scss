@@ -459,64 +459,121 @@
     }
   }
 
-  .subheading {
-    @include media(phone) {
-      font-size: em(24);
-    }
-  }
+  .swiper-container {
+    > .container {
+      margin-top: -63px;
 
-  .bodycopy {
-    margin-top: 4%;
-  }
-
-  .form {
-    width: 50%;
-    padding: 75px;
-    background: transparent;
-
-    @include media(phone) {
-      width: calc(100% - 50px);
-      padding: 25px;
+      @include media(phone) {
+        margin-top: 0;
+      }
     }
 
-    &__block {
+    .swiper-pagination {
+      display: none;
+
+      @include media(phone) {
+        text-align: right;
+        font-size: em(14);
+        display: block;
+        color: $gray;
+        bottom: 35px;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      height: calc(100% - 20px);
+      padding-top: 20px;
+      outline: none;
+      display: grid;
+      width: 40%;
       margin: 0;
+      top: 0;
 
-      form {
-        width: 100%;
+      @include media(phone) {
+        background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
+        border: 2px solid $white;
+        padding: 16px 35px;
+        bottom: inherit;
+        outline: none;
+        height: 16px;
+        width: 31px;
+        top: 46px;
 
         @include media(phone) {
-          margin-top: 0;
+          top: 20px;
         }
+      }
+
+      &:hover span {
+        &:first-of-type,
+        &:last-of-type {
+          color: $purple;
+        }
+      }
+
+      span {
+        @include transition($time);
+        z-index: 1;
+
+        @include media(phone) {
+          display: none;
+        }
+
+        &:first-of-type {
+          letter-spacing: 1px;
+          color: $gray-light;
+          font-size: em(14);
+        }
+
+        &:last-of-type {
+          color: $dark;
+          font-size: em(24);
+          line-height: 52px;
+          font-family: $bold;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      padding-right: 10%;
+      text-align: right;
+      left: 0;
+
+      @include media(phone) {
+        transform: rotate(180deg);
+        padding-right: 35px;
+        left: 0;
+      }
+
+      &::after {
+        content: '';
+        background-color: $gray-light;
+        position: absolute;
+        height: 64%;
+        width: 2px;
+        left: 100%;
+        top: 19%;
+
+        @include media(phone) {
+          display: none;
+        }
+      }
+    }
+
+    .swiper-button-next {
+      padding-left: 10%;
+      right: 0;
+
+      @include media(phone) {
+        padding-left: 35px;
+        left: 103px;
       }
     }
   }
 
-  &__content {
-    width: 50%;
-    padding-left: 75px;
-
-    @include media(phone) {
-      width: calc(100% - 50px);
-      padding: 25px;
-    }
-  }
-
-  &__close {
-    background: url('/../images/close.svg') no-repeat;
-    position: absolute;
-    cursor: pointer;
-    height: 28px;
-    width: 29px;
-    right: 25px;
-    top: 25px;
-
-    @include media(phone) {
-      right: 15px;
-      top: 15px;
-      zoom: .8;
-    }
-  }
 
   &.opened > div {
     animation: fade-in-up $time * 2 $time / 2;

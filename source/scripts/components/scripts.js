@@ -124,6 +124,23 @@ if ($(".dark-elements").length) {
   }
 }
 
+// swiper touch slider on the post page
+$(".swiper-container").each(function (index) {
+    var post = new Swiper($(this)[0], {
+        simulateTouch: false,
+        speed: 1000,
+        loop: true,
+        pagination: {
+          type: "fraction",
+          el: ".swiper-pagination"
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+    });
+});
+
 // swiper touch slider on the about page
 var clients = new Swiper("#clients", {
     simulateTouch: false,
@@ -163,7 +180,6 @@ var swiper = new Swiper("#swiper", {
 var blog = new Swiper("#blog", {
     simulateTouch: false,
     speed: 1000,
-    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -174,26 +190,9 @@ var blog = new Swiper("#blog", {
     }
 });
 
-// swiper touch slider on the post page
-$(".swiper-container").each(function (index) {
-    var post = new Swiper($(this)[0], {
-        simulateTouch: false,
-        speed: 1000,
-        loop: true,
-        pagination: {
-          type: "fraction",
-          el: ".swiper-pagination"
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
-    });
-});
-
 // map
 (function() {
-  var center = { lat: 50.3639966, lng: 30.5514101 };
+  var center = { lat: 50.455796, lng: 30.512624 };
   var map = new google.maps.Map(document.querySelector("#map"), {
       gestureHandling: "cooperative",
       streetViewControl: false,
