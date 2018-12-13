@@ -428,6 +428,7 @@
 
   img {
     width: 100%;
+    height: 700px;
     display: block;
     object-fit: cover;
 
@@ -437,26 +438,14 @@
     }
   }
 
-  .container {
+  > .container {
     animation: fade-in-up-reverse $time * 2;
     background-color: lighten($dark, 5%);
     align-items: center;
     position: relative;
+    margin: 3% auto;
     display: flex;
     opacity: 0;
-
-    @include media(phone) {
-      margin: 5% auto;
-      display: block;
-    }
-
-    @include media(laptop) {
-      margin: 2% auto;
-    }
-
-    @include media(large) {
-      margin: 10% auto;
-    }
   }
 
   .swiper-container {
@@ -482,112 +471,73 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-      height: calc(100% - 20px);
-      padding-top: 20px;
+      @include transition($time);
+      background: url('/../images/arrow-dark.svg') 50% 50% no-repeat;
+      border: 2px solid $dark;
+      padding: 16px 24px;
       outline: none;
-      display: grid;
-      width: 40%;
-      margin: 0;
-      top: 0;
+      height: 16px;
+      width: 31px;
 
       @include media(phone) {
-        background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
-        border: 2px solid $white;
         padding: 16px 35px;
         bottom: inherit;
-        outline: none;
-        height: 16px;
-        width: 31px;
-        top: 46px;
-
-        @include media(phone) {
-          top: 20px;
-        }
       }
 
-      &:hover span {
-        &:first-of-type,
-        &:last-of-type {
-          color: $purple;
-        }
-      }
-
-      span {
-        @include transition($time);
-        z-index: 1;
-
-        @include media(phone) {
-          display: none;
-        }
-
-        &:first-of-type {
-          letter-spacing: 1px;
-          color: $gray-light;
-          font-size: em(14);
-        }
-
-        &:last-of-type {
-          color: $dark;
-          font-size: em(24);
-          line-height: 52px;
-          font-family: $bold;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-        }
+      &:hover {
+        background: url('/../images/arrow-second.svg') 50% 50% no-repeat;
+        background-color: $dark;
       }
     }
 
     .swiper-button-prev {
-      padding-right: 10%;
-      text-align: right;
-      left: 0;
+      transform: rotate(180deg);
+      left: initial;
+      right: 106px;
 
       @include media(phone) {
-        transform: rotate(180deg);
-        padding-right: 35px;
+        right: initial;
         left: 0;
-      }
-
-      &::after {
-        content: '';
-        background-color: $gray-light;
-        position: absolute;
-        height: 64%;
-        width: 2px;
-        left: 100%;
-        top: 19%;
-
-        @include media(phone) {
-          display: none;
-        }
       }
     }
 
     .swiper-button-next {
-      padding-left: 10%;
-      right: 0;
+      right: 25px;
 
       @include media(phone) {
-        padding-left: 35px;
         left: 103px;
       }
     }
   }
-
 
   &.opened > div {
     animation: fade-in-up $time * 2 $time / 2;
     animation-fill-mode: forwards;
   }
 
-  &--cellar {
+  &__close {
+    background: url('/../images/close-purple.svg') no-repeat;
+    position: absolute;
+    cursor: pointer;
+    height: 68px;
+    z-index: 99;
+    width: 68px;
+    right: 50px;
+    top: 50px;
+
+    @include media(phone) {
+      top: 75px;
+      zoom: .7;
+    }
+  }
+
+  &__cellar {
     position: relative;
     background-color: $white;
+    width: calc(65% - 50px);
+    padding: 20px 25px;
     margin: 0 auto;
-    height: 119px;
-    width: 83%;
     z-index: 1;
-
 
     @include media(phone) {
       background-color: transparent;
@@ -595,28 +545,41 @@
       width: 100%;
     }
 
-    &::before,
-    &::after {
-      background: url('/../images/arrow.svg') no-repeat;
-      position: absolute;
-      outline: none;
-      height: 16px;
-      width: 70px;
-      content: '';
-      top: 50%;
+    div:first-of-type {
+      display: grid;
+    }
+
+    &--title {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: normal;
+      font-family: $bold;
+      line-height: 52px;
+      font-size: em(30);
+      color: $dark;
 
       @include media(phone) {
-        display: none;
+        width: calc(95% - 68px);
+        letter-spacing: 3px;
+        line-height: 33px;
+        font-size: em(23);
+        display: initial;
+        padding-top: 9%;
+        float: left;
+        margin: 0;
       }
     }
 
-    &::before {
-      transform: rotate(180deg);
-      left: 10%;
-    }
+    &--subtitle {
+      float: left;
+      font-size: em(14);
+      color: $gray-dark;
 
-    &::after {
-      right: 10%;
+      @include media(phone) {
+        letter-spacing: 1.5px;
+        line-height: 18px;
+        font-size: em(12);
+      }
     }
   }
 }

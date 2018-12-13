@@ -55,10 +55,12 @@
 
       // mobile menu burger button
       &--burger {
+        top: 0;
+        right: 0;
         z-index: 3;
-        float: right;
-        margin-top: 21px;
-        position: relative;
+        padding: 18px;
+        position: absolute;
+        background-color: darken($gray, 20%);
 
         .open {
           background: url('/../images/burger.svg') no-repeat;
@@ -84,6 +86,23 @@
         &:hover {
           color: $purple;
         }
+      }
+
+      // mobile menu burger button
+      .header__hood--burger {
+        background-color: $white;
+
+        .open {
+          background: url('/../images/burger-dark.svg') no-repeat;
+        }
+      }
+    }
+
+    &.black-elements {
+
+      // mobile menu burger button
+      .header__hood--burger {
+        background-color: $dark;
       }
     }
 

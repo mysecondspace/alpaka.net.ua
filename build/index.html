@@ -20,8 +20,8 @@
       <!-- header -->
       <header id="header" class="header">
 
-        <!-- panel with logotype and menu -->
-        <nav class="header__hood">
+        <!-- panel with logotype, menu and black burger -->
+        <nav class="header__hood black-elements">
           <div class="container">
           
             <!-- light logotype -->
@@ -287,6 +287,18 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-slide">
+                <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+
+                <!-- hood -->
+                <div class="article__portfolio--hood">
+                  <div class="container">
+                    <span>Упаковка для продуктов питания</span>
+                    <h2 class="article__portfolio--title">O'su Yogurt</h2>
+                    <div class="article__portfolio--button" onclick="projectOpen()">Больше</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="container">
 
@@ -515,6 +527,41 @@
         </div>
       </footer>
     </div>
+
+    <!-- project window -->
+    <div class="project">
+      <div class="container">
+    
+        <!-- close -->
+        <div class="project__close" onclick="projectClose()"></div>
+    
+         <!-- swiper touch slider -->
+          <div id="blog" class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+              </div>
+            </div>
+            <div class="container">
+    
+              <!-- cellar -->
+              <div class="project__cellar">
+                <div>
+                  <p class="project__cellar--title">O'su Yogurt</p>
+                  <p class="project__cellar--subtitle">Упаковка для продуктов питания</p>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
 
     <!-- script -->
     <script src="scripts/main.min.js"></script>

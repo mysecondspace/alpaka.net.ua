@@ -15,8 +15,8 @@
       <!-- header -->
       <header id="header" class="header">
 
-        <!-- panel with logotype and menu -->
-        <nav class="header__hood">
+        <!-- panel with logotype, menu and black burger -->
+        <nav class="header__hood black-elements">
           //= templates/hood.html
         </nav>
 
@@ -188,6 +188,18 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-slide">
+                <img src="images/portfolio-1.jpg" alt="O'su Yogurt">
+
+                <!-- hood -->
+                <div class="article__portfolio--hood">
+                  <div class="container">
+                    <span>Упаковка для продуктов питания</span>
+                    <h2 class="article__portfolio--title">O'su Yogurt</h2>
+                    <div class="article__portfolio--button" onclick="projectOpen()">Больше</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="container">
 
@@ -345,6 +357,9 @@
       <!-- footer -->
       //= templates/footer.html
     </div>
+
+    <!-- project window -->
+    //= templates/project.html
 
     <!-- script -->
     <script src="scripts/main.min.js"></script>

@@ -64,6 +64,9 @@ if (screen.width < 768) {
   });
 }
 
+// add class to every third element
+$(".article__catalog--tiles div:nth-child(3n)").addClass("wide");
+
 // initialize anchor
 $(document).on("click", "a[href^='#']", function(event) {
 
@@ -100,14 +103,12 @@ $(document).mouseup(function(e) {
 
 function projectOpen() {
   $("body").css("overflow", "hidden");
-  $(".project").addClass("opened");
-  $(".project").fadeIn(250);
+  $(".project").addClass("opened").fadeIn(250);
 }
 
 function projectClose() {
   $("body").css("overflow", "auto");
-  $(".project").removeClass("opened");
-  $(".project").delay(250).fadeOut(250);
+  $(".project").removeClass("opened").delay(250).fadeOut(250);
 }
 
 // changing logotype color
@@ -125,11 +126,10 @@ if ($(".dark-elements").length) {
 }
 
 // swiper touch slider on the post page
-$(".swiper-container").each(function (index) {
+$(".article__post--content .swiper-container").each(function(index) {
     var post = new Swiper($(this)[0], {
         simulateTouch: false,
         speed: 1000,
-        loop: true,
         pagination: {
           type: "fraction",
           el: ".swiper-pagination"
@@ -161,7 +161,6 @@ var swiper = new Swiper("#swiper", {
     simulateTouch: false,
     autoHeight: true,
     speed: 1000,
-    loop: true,
     pagination: {
       type: "fraction",
       el: ".swiper-pagination"
@@ -192,8 +191,13 @@ var blog = new Swiper("#blog", {
 
 // map
 (function() {
-  var center = { lat: 50.455796, lng: 30.512624 };
-  var map = new google.maps.Map(document.querySelector("#map"), {
+   var center = { lat: 50.424283, lng: 30.522853 };
+   var locations = [
+      ["Большая Житомирская", 50.455796, 30.512624, "/images/map-office.svg"],
+      ["Плещеева", 50.363993, 30.553599, "/images/map-manufacture.svg"]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
       gestureHandling: "cooperative",
       streetViewControl: false,
       mapTypeControl: false,
@@ -201,7 +205,7 @@ var blog = new Swiper("#blog", {
       scrollwheel: false,
       zoomControl: true,
       panControl: false,
-      zoom: 15,
+      zoom: 12,
       center: {
         lat: center.lat - 0.00021,
         lng: center.lng + 0.0003
@@ -486,11 +490,17 @@ var blog = new Swiper("#blog", {
           ]
         }
       ]
-  });
+    });
 
-  var marker = new google.maps.Marker({
-    icon: '/images/map.svg',
-    position: center,
-    map: map
-  });
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        icon: locations[i][3],
+        map: map,
+      });
+    }
 })();
