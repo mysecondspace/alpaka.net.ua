@@ -174,7 +174,7 @@ article { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 .project { background-color: rgba(0, 0, 0, 0.9); overflow-x: hidden; overflow-y: auto; position: fixed; display: none; z-index: 999; height: 100%; width: 100%; left: 0; top: 0; }
 .project img { width: 100%; height: 700px; display: block; -o-object-fit: cover; object-fit: cover; }
 @media only screen and (max-width: 767px) { .project img { margin-top: 19.5%; height: 358px; } }
-.project > .container { animation: fade-in-up-reverse 0.4s; background-color: #161616; -ms-flex-align: center; align-items: center; position: relative; margin: 3% auto; display: -ms-flexbox; display: flex; opacity: 0; }
+.project > .container { animation: fade-in-up-reverse 0.4s; -ms-flex-align: center; align-items: center; position: relative; margin: 3% auto; display: -ms-flexbox; display: flex; opacity: 0; }
 .project .swiper-container > .container { margin-top: -63px; }
 @media only screen and (max-width: 767px) { .project .swiper-container > .container { margin-top: 0; } }
 .project .swiper-container .swiper-pagination { display: none; }
